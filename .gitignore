@@ -1,0 +1,122 @@
+/[^.]*
+/.config/chromium
+/.config/evolution
+/.mozilla
+/.cache
+/.PX_encfs
+/.Private
+/.gvfs
+*.log
+/.xsession-errors*
+/.ICEauthority
+/.Skype
+/.VirtualBox
+/.aria2/dht.dat
+/.aptitude
+/.Xauthority
+/.macromedia
+/.adobe
+/.ccache
+/.thumbnails
+/.cups
+/.dbus
+/.fontconfig/*cache*
+/.devscripts_cache
+/.bash_history
+/.pulse-cookie
+/.pulse
+/.pylint.d
+/.dvdcss
+/.mplayer
+/.gstreamer-*/registry*.bin
+
+/.icedtea
+/.java
+/.bazaar/shell-history
+/.esd_auth
+/.gksu.lock
+/.ghc/ghci_history
+*_socket_*
+/.config/totem/state.*
+/.config/nautilus/desktop-metadata
+/.config/Empathy/accels.txt
+/.config/Empathy/contact-groups.xml
+/.config/Empathy/geometry.ini
+/.config/chromium
+/.config/midori
+/.config/evolution
+/.config/gtk-2.0/gtkfilechooser.ini
+
+/.config/ipython/README
+/.config/ipython/profile_default/startup
+/.config/ipython/profile_default/startup/README
+/.config/ipython/profile_default/pid
+/.config/ipython/profile_default/log
+/.config/ipython/profile_default/db
+/.config/ipython/profile_default/history.sqlite
+/.config/ipython/profile_default/security
+
+/.config/menus/applications-merged/xdg-desktop-menu-dummy.menu
+
+/.config/dconf
+
+/.cabal/packages
+/.local/share
+
+/.gnupg/*
+/.get_iplayer/download_history
+/.get_iplayer/plugins
+/.get_iplayer/pvr
+/.get_iplayer/*.cache
+/.get_iplayer/
+/.get_iplayer/
+
+
+# We do not really want libreoffice configured
+/.libreoffice
+
+# IkiWiki plugins
+/.ikiwiki
+
+# TuxRacer save games
+/.etracer/player.sav
+# openTTD
+/.openttd/content_download
+/.openttd/save
+/.openttd/scenario
+/.openttd/hs.dat
+
+# Ignore launchpadlib cache
+/.launchpadlib/*/cache
+
+# Sitecopy remote state
+/.sitecopy
+
+# gconf state
+/.gconfd/saved_state
+
+/.qt/*.lock
+
+# Crypto related stuff
+/.gnome2/1keyrings
+/.gnome2/keyrings
+/.pki
+/.ecryptfs
+
+/.swfinfo
+
+# Possibly confidential xchat2 configuration and logs
+/.xchat2/xchatlogs
+/.xchat2/scrollback
+/.xchat2/servlist_.conf
+/.hgit
+
+/.config/geany/tags
+
+# I don't really configure subversion anyway
+/.subversion
+
+# Not wanted
+/.update-notifier/hooks_seen
+/.wine
+/.android
