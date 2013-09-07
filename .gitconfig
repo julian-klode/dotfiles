@@ -1,0 +1,7 @@
+[user]
+	email = jak@debian.org
+	name = Julian Andres Klode
+[color]
+	ui = auto
+[alias]
+	cd = diff -p --stat
