@@ -16,7 +16,25 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+# Set the default path to the one for root, with games added
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# set PATH so it includes ccache binaries if installed
+if [ -d /usr/lib/ccache ]; then
+    export PATH="/usr/lib/ccache:$PATH"
+    export CCACHE_DIR="$HOME/.cache/ccache"
+fi
+
+# Setup stuff for email and co
+export EDITOR="editor"
+export EMAIL="Julian Andres Klode <jak@debian.org>"
+export DEBEMAIL="jak@debian.org"
+
+# Android development
+export PATH=$PATH:$HOME/Downloads/android-sdk-linux/platform-tools
+export PATH=$PATH:$HOME/Downloads/android-sdk-linux/tools
