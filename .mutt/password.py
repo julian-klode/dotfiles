@@ -20,7 +20,7 @@ def keyring(user="", host="", proto="imap"):
 		result, values = GnomeKeyring.find_items_sync(GnomeKeyring.ItemType.GENERIC_SECRET, attrs)
 	else:
 		result, values = GnomeKeyring.find_network_password_sync(user, None, host, None, proto, None, 0)
-  
+
 	try:
 		return values[0].secret
 	except:
