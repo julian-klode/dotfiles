@@ -120,3 +120,8 @@
 /.update-notifier/hooks_seen
 /.wine
 /.android
+
+# Ignore personal and per-system stuff
+.ssh/id_*
+.ssh/known_hosts
+.ssh/authorized_keys
