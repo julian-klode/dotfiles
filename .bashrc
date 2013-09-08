@@ -143,4 +143,8 @@ alias gitg="_run_git gitg"
 alias debsign="debsign -k00823EC2"
 alias diff="git diff --no-index --no-prefix"
 
+alias math="MUTT_ACCOUNT=math mutt"
+alias stud="MUTT_ACCOUNT=students mutt"
+alias marburg="MUTT_ACCOUNT=students mutt"
+
 . /etc/profile.d/vte.sh
