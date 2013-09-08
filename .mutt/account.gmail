@@ -21,7 +21,7 @@ set markers=no
 set delete=yes
 
 # Mailboxes
-unmailboxes
+unmailboxes *
 mailboxes +INBOX \
           +AC100 \
           +Debian \
@@ -32,7 +32,7 @@ mailboxes +INBOX \
           +Debian/Private \
           +Debian/Security \
           +GNOME \
-          +Launchpad
+          +Launchpad \
           +Privat \
           +Privat/1&1 \
           +Privat/Amazon \
