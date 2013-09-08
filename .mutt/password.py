@@ -7,7 +7,7 @@ def keyring(user="", host="", proto="imap"):
 	if "@" not in user:
 		user = user+"@gmail.com"
 
-	# SSO
+	# SSO (gmail <- evolution, university <- chrome)
 	if host in ("imap.gmail.com", "smtp.gmail.com"):
 		result, values = GnomeKeyring.find_network_password_sync(None, None, "www.google.com", None, None, None, 0)
 	elif host in ("imap.mathematik.uni-marburg.de", "smtp.mathematik.uni-marburg.de"):
