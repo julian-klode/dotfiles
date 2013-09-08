@@ -1,11 +1,11 @@
 # IMAP server
 set folder="imaps://imap.students.uni-marburg.de"
 set imap_user="Klode"
-set imap_pass=`/home/jak/.mutt-password Klode imap.students.uni-marburg.de imap`
+set imap_pass=`/home/jak/.mutt/password.py Klode imap.students.uni-marburg.de imap`
 
 # SMTP server
 set smtp_url="smtps://Klode@smtp.students.uni-marburg.de"
-set smtp_pass=`/home/jak/.mutt-password Klode smtp.students.uni-marburg.de smtp`
+set smtp_pass=`/home/jak/.mutt/password.py Klode smtp.students.uni-marburg.de smtp`
 
 # Generic setup
 set from=Klode@students.uni-marburg.de
