@@ -1,0 +1,103 @@
+######################################################################
+#                          Server configuration
+######################################################################
+
+#== Receiving via IMAP ==#
+set folder="imaps://imap.mathematik.uni-marburg.de"
+set imap_user="klode"
+
+#== Sending via SMTP ==#
+set smtp_url="smtps://klode@smtp.mathematik.uni-marburg.de:465"
+set ssl_min_dh_prime_bits=512
+
+set from=klode@mathematik.uni-marburg.de
+
+set spoolfile = "+INBOX"
+set postponed="+Drafts"
+set trash="+Trash"
+set imap_idle=yes
+set xterm_set_titles=yes
+set timeout=15
+
+
+
+set certificate_file=~/.config/mutt/certificates
+set move = no
+set copy = yes
+set imap_keepalive = 900
+set markers=no
+set delete = yes
+set record = "+Sent"
+
+
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+
+mailboxes +INBOX +Drafts +Sent +Trash
+
+color sidebar_new yellow default
+
+bind index <Ctrl><Up> sidebar-prev
+bind pager <Esc><Up> sidebar-prev
+bind index <Ctrl><Left> sidebar-prev
+bind pager <Ctrl><Left> sidebar-prev
+
+bind index <Ctrl><Down> sidebar-next
+bind pager <Ctrl><Down> sidebar-prev
+bind index <Ctrl><Right> sidebar-next
+bind pager \CR sidebar-next
+
+
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+bind index \C\r sidebar-open
+bind index \C\n sidebar-open
+
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
+
+bind pager <Ctrl>A sidebar-open
+
+#set imap_check_subscribed
+
+ignore *
+unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package User-Agent X-Mailer
+
+macro pager	x "<exit><sync-mailbox>" "Goto index and sync mailbox"
+macro pager , "<purge-message><sync-mailbox>" "Remove the label from the message"
+macro index , "<purge-message><sync-mailbox>" "Remove the label from the message"
+macro pager . "<purge-message>" "Remove the label, do not sync"
+macro index . "<purge-message>" "Remove the label, do not sync"
+
+macro pager l "<list-reply>" "Reply to list"
+##### encryption #######################################################
+### crypto
+set crypt_autosign = yes # default: no
+set crypt_replysign = yes
+set crypt_use_gpgme = yes
+set header_cache="~/.cache/mutt-math/headers"
+set message_cachedir="~/.cache/mutt-math/bodies"
+
+bind index "i" imap-fetch-mail
+
+
+######################################################################
+#                          Other stuff
+######################################################################
+set query_command = "/usr/lib/mutt/debian-ldap-query '%s'"
+set index_format = "%4C %Z %{%b %d} %-30.30L (%?l?%4l&%4c?) %s"
+set reverse_name = yes
+auto_view text/html application/pdf
+alternative_order text/plain text/html
+
+color index brightyellow black ~N      # New
+
+color index magenta black ~F
+color index blue black ~T
+color index red black ~D
+
+alias robert Robert Brockway <robert@spi-inc.org>

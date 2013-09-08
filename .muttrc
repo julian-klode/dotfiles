@@ -1,0 +1,173 @@
+######################################################################
+#                          Server configuration
+######################################################################
+
+#== Receiving via IMAP ==#
+set folder="imaps://imap.gmail.com:993"
+set imap_user="julian.klode@gmail.com"
+set imap_pass=`/home/jak/.mutt-password julian.klode imap.gmail.com imapx`
+#== Sending via SMTP ==#
+set smtp_url="smtp://julian.klode@gmail.com@smtp.gmail.com:587"
+set smtp_pass=`/home/jak/.mutt-password julian.klode smtp.gmail.com smtp`
+
+
+set spoolfile = "+INBOX"
+set postponed="+[Gmail]/Drafts"
+set trash="+[Gmail]/Trash"
+set imap_idle=yes
+set xterm_set_titles=yes
+set timeout=15
+
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set move = no
+set copy = no
+set imap_keepalive = 900
+set markers=no
+set delete = yes
+set record = ""
+
+
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+
+mailboxes +INBOX +AC100
+
+mailboxes +Debian \
+          +Debian/Announce \
+          +Debian/APT \
+          +Debian/Backports \
+          +Debian/MeeGo \
+          +Debian/Private \
+          +Debian/Security
+
+mailboxes +GNOME \
+          +Launchpad
+
+mailboxes +Privat \
+          +Privat/1&1 \
+          +Privat/Amazon \
+          +Privat/O2 \
+          +Privat/Schule \
+          +Privat/Strato \
+
+mailboxes +SPI
+mailboxes +[Gmail] \
+          +[Gmail]/Sent\ Mail
+
+color sidebar_new yellow default
+
+bind index <Ctrl><Up> sidebar-prev
+bind pager <Esc><Up> sidebar-prev
+bind index <Ctrl><Left> sidebar-prev
+bind pager <Ctrl><Left> sidebar-prev
+
+bind index <Ctrl><Down> sidebar-next
+bind pager <Ctrl><Down> sidebar-prev
+bind index <Ctrl><Right> sidebar-next
+bind pager \CR sidebar-next
+
+
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+bind index \C\r sidebar-open
+bind index \C\n sidebar-open
+
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
+
+bind pager <Ctrl>A sidebar-open
+
+#set imap_check_subscribed
+
+ignore *
+unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package
+
+macro pager	x "<exit><sync-mailbox>" "Goto index and sync mailbox"
+macro pager , "<purge-message><sync-mailbox>" "Remove the label from the message"
+macro index , "<purge-message><sync-mailbox>" "Remove the label from the message"
+macro pager . "<purge-message>" "Remove the label, do not sync"
+macro index . "<purge-message>" "Remove the label, do not sync"
+
+macro pager l "<list-reply>" "Reply to list"
+macro pager S "s=[Gmail]/Spam\n" "Mark as Spam"
+macro index S "s=[Gmail]/Spam\n" "Mark as Spam"
+##### encryption #######################################################
+### crypto
+set crypt_autosign = yes # default: no
+set crypt_replysign = yes
+set crypt_use_gpgme = yes
+set header_cache="~/.cache/mutt/headers"
+set message_cachedir="~/.cache/mutt/bodies"
+bind index "i" imap-fetch-mail
+
+
+######################################################################
+#                          Mailing lists    
+######################################################################
+lists       .*@lists.debian.org \
+            .*@lists.ubuntu.com \
+            [0-9]+@bugs.debian.org \
+            .*@lists.launchpad.net \
+            .*@lists.spi-inc.org \
+            .*@lists.alioth.debian.org \
+            devel@linuxdriverproject.org
+
+subscribe   debian-devel-announce@lists.debian.org \
+            debian-announce@lists.debian.org \
+            debian-infrastructure-announce@lists.debian.org \
+            debian-security-announce@lists.debian.org \
+            debian-backports@lists.debian.org \
+            debian-private@lists.debian.org \
+            deity@lists.debian.org \
+            spi-private@lists.spi-inc.org \
+            pkg-meego-maintainers@lists.alioth.debian.org \
+            ac100@lists.launchpad.net \
+            devel@linuxdriverproject.org
+
+######################################################################
+#                          Headers
+######################################################################
+send-hook . 'unmy_hdr From:'
+send-hook . 'unmy_hdr Message-ID:'
+
+## Ubuntu Stuff
+send-hook '~C ^.*[.@]ubuntu.com$' 'my_hdr From: Julian Andres Klode <juliank@ubuntu.com>'
+send-hook '~C ^.*[.@]canonical.com$' 'my_hdr From: Julian Andres Klode <juliank@ubuntu.com>'
+
+## GNOME
+send-hook '~C ^.*gnome\.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
+send-hook '~C ^ac100@lists.launchpad.net\.net$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
+send-hook '~C ^devel@linuxdriverproject\.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
+send-hook '~C ^devel@driverdev\.osuosl\.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
+## Debian Stuff
+send-hook '~C ^.*debian\.org$' 'my_hdr From: Julian Andres Klode <jak@debian.org>'
+send-hook '~C ^.*debian\.org$' 'my_hdr Message-ID: <`date +"%Y%m%d%H%M%S"`.GA`echo $PPID`@debian.org>'
+
+
+######################################################################
+#                          Other stuff
+######################################################################
+set query_command = "/usr/lib/mutt/debian-ldap-query '%s'"
+set index_format = "%4C %Z %{%b %d} %-30.30L (%?l?%4l&%4c?) %s"
+set reverse_name = yes
+auto_view text/html application/pdf
+alternative_order text/plain text/html
+
+color index brightyellow black ~N      # New
+
+color index magenta black ~F
+color index blue black ~T
+color index red black ~D
+
+
+# Check mails every 10 minutes
+set mail_check=600
+
+
