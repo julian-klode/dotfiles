@@ -1,0 +1,26 @@
+# IMAP server
+set folder="imaps://imap.mathematik.uni-marburg.de"
+set imap_user="klode"
+set smtp_pass=`/home/jak/.mutt-password klode imap.mathematik.uni-marburg.de imap`
+
+# SMTP server
+set smtp_url="smtps://klode@smtp.mathematik.uni-marburg.de:465"
+set smtp_pass=`/home/jak/.mutt-password klode smtp.mathematik.uni-marburg.de smtp`
+set ssl_min_dh_prime_bits=512
+
+# Generic setup
+set from=klode@mathematik.uni-marburg.de
+set spoolfile="+INBOX"
+set postponed="+Drafts"
+set trash="+Trash"
+set record="+Sent"
+
+# Other options
+set move=no
+set copy=yes
+set markers=no
+set delete=yes
+
+# Mailboxes
+unmailboxes *
+mailboxes +INBOX +Drafts +Sent +Trash

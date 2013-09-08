@@ -1,0 +1,25 @@
+# IMAP server
+set folder="imaps://imap.students.uni-marburg.de"
+set imap_user="Klode"
+set smtp_pass=`/home/jak/.mutt-password Klode imap.students.uni-marburg.de imap`
+
+# SMTP server
+set smtp_url="smtps://Klode@smtp.students.uni-marburg.de"
+set smtp_pass=`/home/jak/.mutt-password Klode smtp.students.uni-marburg.de smtp`
+
+# Generic setup
+set from=Klode@students.uni-marburg.de
+set spoolfile="+INBOX"
+set postponed="+Drafts"
+set trash="+Trash"
+set record="+Sent"
+
+# Other options
+set move=no
+set copy=no
+set markers=no
+set delete=yes
+
+# Mailboxes
+unmailboxes *
+mailboxes +INBOX +Drafts +Sent +Trash
