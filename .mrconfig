@@ -1,0 +1,26 @@
+[Projects/Debian/app-install-data]
+checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/app-install-data.git' 'app-install-data'
+
+[Projects/Debian/apt]
+checkout = git clone 'git+ssh://git.debian.org/git/apt/apt.git' 'apt'
+
+[Projects/Debian/hardlink]
+checkout = git clone 'git+ssh://git.debian.org/git/users/jak/hardlink.git' 'hardlink'
+
+[Projects/Debian/ndiswrapper]
+checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/ndiswrapper.git' 'ndiswrapper'
+
+[Projects/Debian/python-apt]
+checkout = git clone 'git+ssh://git.debian.org/git/apt/python-apt.git' 'python-apt'
+
+[Projects/Stable/apt-show-versions]
+checkout = git clone 'git+ssh://git.debian.org/git/users/jak/apt-show-versions.git' 'apt-show-versions'
+
+[Projects/Stable/cleanup]
+checkout = git clone 'git+ssh://git.debian.org/git/users/jak/cleanup.git' 'cleanup'
+
+[Projects/Stable/jak-meta]
+checkout = git clone 'git+ssh://git.debian.org/git/users/jak/jak-meta.git' 'jak-meta'
+
+[Projects/Stable/simple-efi-boot]
+checkout = git clone 'git+ssh://git.debian.org/git/users/jak/simple-efi-boot.git' 'simple-efi-boot'
