@@ -147,4 +147,6 @@ alias math="MUTT_ACCOUNT=math mutt"
 alias stud="MUTT_ACCOUNT=students mutt"
 alias marburg="MUTT_ACCOUNT=students mutt"
 
+alias mr="mr -j5"
+
 . /etc/profile.d/vte.sh
