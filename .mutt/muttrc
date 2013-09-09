@@ -61,6 +61,9 @@ unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package
 macro index <f2> '<change-folder>imaps://imap.gmail.com:993/<enter>'
 macro index <f3> '<change-folder>imaps://imap.mathematik.uni-marburg.de<enter>'
 macro index <f4> '<change-folder>imaps://imap.students.uni-marburg.de<enter>'
+macro pager <f2> '<change-folder>imaps://imap.gmail.com:993/<enter>'
+macro pager <f3> '<change-folder>imaps://imap.mathematik.uni-marburg.de<enter>'
+macro pager <f4> '<change-folder>imaps://imap.students.uni-marburg.de<enter>'
 
 # Folder hooks
 folder-hook 'gmail.com' 'source ~/.mutt/account.gmail'
