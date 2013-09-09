@@ -1,3 +1,6 @@
+[ALIAS]
+pull = update
+
 [Projects/Debian/app-install-data]
 checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/app-install-data.git' 'app-install-data'
 
