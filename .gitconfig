@@ -5,3 +5,5 @@
 	ui = auto
 [alias]
 	cd = diff -p --stat
+[push]
+	default = simple
