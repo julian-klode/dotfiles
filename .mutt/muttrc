@@ -32,18 +32,10 @@ color index red black ~D
 color sidebar_new yellow default
 
 # Key bindings
-bind pager \CR sidebar-next
-bind index \CP sidebar-prev
-bind index \CN sidebar-next
-bind index \CO sidebar-open
-bind pager \CP sidebar-prev
-bind pager \CN sidebar-next
-bind pager \CO sidebar-open
-bind index \C\r sidebar-open
-bind index \C\n sidebar-open
-macro index b '<enter-command>toggle sidebar_visible<enter>'
-macro pager b '<enter-command>toggle sidebar_visible<enter>'
-bind pager <Ctrl>A sidebar-open
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+macro index,pager b '<enter-command>toggle sidebar_visible<enter>'
 bind index "i" imap-fetch-mail
 
 # Mail view
@@ -51,12 +43,9 @@ ignore *
 unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package User-Agent X-Mailer
 
 # Accounts
-macro index <f2> '<change-folder>imaps://imap.gmail.com:993/<enter>'
-macro index <f3> '<change-folder>imaps://imap.mathematik.uni-marburg.de<enter>'
-macro index <f4> '<change-folder>imaps://imap.students.uni-marburg.de<enter>'
-macro pager <f2> '<change-folder>imaps://imap.gmail.com:993/<enter>'
-macro pager <f3> '<change-folder>imaps://imap.mathematik.uni-marburg.de<enter>'
-macro pager <f4> '<change-folder>imaps://imap.students.uni-marburg.de<enter>'
+macro index,pager <f2> '<change-folder>imaps://imap.gmail.com:993/<enter>'
+macro index,pager <f3> '<change-folder>imaps://imap.mathematik.uni-marburg.de<enter>'
+macro index,pager <f4> '<change-folder>imaps://imap.students.uni-marburg.de<enter>'
 
 # Folder hooks
 folder-hook 'gmail.com' 'source ~/.mutt/account.gmail'
