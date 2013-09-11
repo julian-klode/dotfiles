@@ -32,13 +32,6 @@ color index red black ~D
 color sidebar_new yellow default
 
 # Key bindings
-bind index <Ctrl><Up> sidebar-prev
-bind pager <Esc><Up> sidebar-prev
-bind index <Ctrl><Left> sidebar-prev
-bind pager <Ctrl><Left> sidebar-prev
-bind index <Ctrl><Down> sidebar-next
-bind pager <Ctrl><Down> sidebar-prev
-bind index <Ctrl><Right> sidebar-next
 bind pager \CR sidebar-next
 bind index \CP sidebar-prev
 bind index \CN sidebar-next
