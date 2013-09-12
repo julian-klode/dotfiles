@@ -62,7 +62,8 @@ lists       .*@lists.debian.org \
             .*@lists.launchpad.net \
             .*@lists.spi-inc.org \
             .*@lists.alioth.debian.org \
-            devel@linuxdriverproject.org
+            devel@linuxdriverproject.org \
+            .*@vger.kernel.org
 
 subscribe   debian-devel-announce@lists.debian.org \
             debian-announce@lists.debian.org \
