@@ -7,6 +7,9 @@ checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/app-install-data
 [Projects/Debian/apt]
 checkout = git clone 'git+ssh://git.debian.org/git/apt/apt.git' 'apt'
 
+[Projects/Debian/dh-autoreconf]
+checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/dh-autoreconf.git' 'dh-autoreconf'
+
 [Projects/Debian/hardlink]
 checkout = git clone 'git+ssh://git.debian.org/git/users/jak/hardlink.git' 'hardlink'
 
