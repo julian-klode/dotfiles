@@ -149,4 +149,6 @@ alias marburg="MUTT_ACCOUNT=students mutt"
 
 alias mr="mr -j5"
 
-. /etc/profile.d/vte.sh
+if [ -e /etc/profile.d/vte.sh ]; then
+    . /etc/profile.d/vte.sh
+fi
