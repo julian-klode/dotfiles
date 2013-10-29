@@ -24,3 +24,5 @@ set delete=yes
 # Mailboxes
 unmailboxes *
 mailboxes +INBOX +Drafts +Sent +Trash
+
+set rfc2047_parameters
