@@ -54,3 +54,6 @@ folder-hook 'students.uni-marburg.de' 'source ~/.mutt/account.students'
 
 # Load default account (gmail; or the one specified in MUTT_ACCOUNT)
 source `if [ -z $MUTT_ACCOUNT ]; then MUTT_ACCOUNT=gmail; fi; echo ~/.mutt/account.$MUTT_ACCOUNT`
+
+auto_view text/html
+alternative_order text/plain text/html
