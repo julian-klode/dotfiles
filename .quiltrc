@@ -1,0 +1,11 @@
+if [ -z "$QUILT_PATCHES" ]; then
+    for where in ./ ../ ../../ ../../../ ../../../../ ../../../../../; do
+        if [ -e ${where}debian/rules -a -d ${where}debian/patches ]; then
+                export QUILT_PATCHES=debian/patches
+        fi
+    done
+fi
+QUILT_NO_DIFF_INDEX=y
+QUILT_NO_DIFF_TIMESTAMPS=y
+QUILT_DIFF_OPTS="--show-c-function"
+QUILT_REFRESH_ARGS="-p ab"
