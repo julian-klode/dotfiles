@@ -118,9 +118,17 @@ fi
 # the current directory is $HOME.
 _run_git() {
     if [ "$PWD" = "$HOME" ]; then
-	GIT_DIR=.hgit "$@"
-    else
-	"$@"
+	export GIT_DIR=.hgit
+    fi
+
+    if [ -z "$(env git config --local --get user.email)" ]; then
+	echo "WARNING: No email adress specified" >&2
+    fi
+
+    "$@"
+
+    if [ -z "$(env git config --local --get user.email)" ]; then
+	echo "WARNING: No email adress specified" >&2
     fi
 }
 
