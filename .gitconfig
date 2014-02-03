@@ -7,3 +7,6 @@
 	cd = diff -p --stat
 [push]
 	default = simple
+[merge "dpkg-mergechangelogs"]
+	name = debian/changelog merge driver
+	driver = dpkg-mergechangelogs -m %O %A %B %A
