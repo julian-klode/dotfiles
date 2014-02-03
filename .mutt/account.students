@@ -1,3 +1,4 @@
+
 # IMAP server
 set folder="imaps://imap.students.uni-marburg.de"
 set imap_user="Klode"
@@ -22,4 +23,7 @@ set delete=yes
 
 # Mailboxes
 unmailboxes *
-mailboxes +INBOX +Drafts +Sent +Trash
+mailboxes +INBOX +Drafts +Sent +Trash +Archive
+
+macro index a "s=Archive\n" "Archive"
+macro pager a "s=Archive\n" "Archive"

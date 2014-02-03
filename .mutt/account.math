@@ -23,6 +23,9 @@ set delete=yes
 
 # Mailboxes
 unmailboxes *
-mailboxes +INBOX +Drafts +Sent +Trash
+mailboxes +INBOX +Drafts +Sent +Trash +Archive
 
 set rfc2047_parameters
+
+macro index a "s=Archive\n" "Archive"
+macro pager a "s=Archive\n" "Archive"
