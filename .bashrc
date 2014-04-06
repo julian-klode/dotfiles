@@ -156,6 +156,7 @@ alias stud="MUTT_ACCOUNT=students mutt"
 alias marburg="MUTT_ACCOUNT=students mutt"
 
 alias mr="mr -j5"
+alias kvm="qemu-system-x86_64 -enable-kvm"
 
 if [ -e /etc/profile.d/vte.sh ]; then
     . /etc/profile.d/vte.sh
