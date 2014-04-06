@@ -32,3 +32,10 @@ post_upload_command = set -e && ~/Projects/Stable/Java/Repository/.apt-ftparchiv
                         gpg -as --clearsign < $dist/Release > $dist/InRelease; \
                       done && \
                       sitecopy -u java
+
+[ppa:deity/ubuntu-tests]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~deity/ubuntu-tests/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
