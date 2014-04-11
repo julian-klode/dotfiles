@@ -40,8 +40,7 @@ bind index "i" imap-fetch-mail
 
 # Mail view
 ignore *
-unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package User-Agent X-Mailer
-
+unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package User-Agent X-Mailer Newsgroups
 # Accounts
 #macro index,pager <f2> '<change-folder>imaps://imap.gmail.com:993/<enter>'
 #macro index,pager <f3> '<change-folder>imaps://imap.mathematik.uni-marburg.de<enter>'

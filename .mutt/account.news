@@ -1,0 +1,24 @@
+# Configuration for reading mailing lists via gmane
+
+# Generic setup
+set news_cache_dir="~/.cache/mutt/news/"
+set sidebar_visible=yes
+set from="jak@debian.org"
+
+# Server and mailboxes
+set news_server="news://news.gmane.org/"
+set folder="news://news.gmane.org/"
+set spoolfile="+gmane.linux.debian.devel.general"
+
+mailboxes +gmane.linux.debian.devel.general \
+          +gmane.linux.debian.devel.project \
+          +gmane.linux.debian.devel.vote
+
+# Behaviour
+set catchup_newsgroup=ask-yes      # catchup articles when leaving newsgroup
+set mime_subject		          # Use MIME-Quoted-Printable in news headers
+set nntp_context=150		     # number of articles in entered newsgroup
+set nntp_load_description	     # load newsgroup descriptions
+set nntp_poll=60		          # time (in seconds) to check for new news
+set post_moderated=ask-yes	     # Post articles to moderated newsgroups?
+set followup_to_poster=ask-yes
