@@ -154,6 +154,8 @@ alias diff="git diff --no-index --no-prefix"
 alias math="MUTT_ACCOUNT=math mutt"
 alias stud="MUTT_ACCOUNT=students mutt"
 alias marburg="MUTT_ACCOUNT=students mutt"
+alias news="MUTT_ACCOUNT=news mutt"
+alias gmane="MUTT_ACCOUNT=news mutt"
 
 alias mr="mr -j5"
 alias kvm="qemu-system-x86_64 -enable-kvm"
