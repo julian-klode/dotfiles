@@ -117,17 +117,18 @@ fi
 # Passed command and arguments, run the command, and set GIT_DIR=.hgit if
 # the current directory is $HOME.
 _run_git() {
+    local env=env
     if [ "$PWD" = "$HOME" ]; then
-	export GIT_DIR=.hgit
+	env="env GIT_DIR=.hgit"
     fi
 
-    if [ -z "$(env git config --local --get user.email)" ]; then
+    if [ -z "$($env git config --local --get user.email)" ]; then
 	echo "WARNING: No email adress specified" >&2
     fi
 
-    "$@"
+    $env "$@"
 
-    if [ -z "$(env git config --local --get user.email)" ]; then
+    if [ -z "$($env git config --local --get user.email)" ]; then
 	echo "WARNING: No email adress specified" >&2
     fi
 }
