@@ -14,6 +14,9 @@ checkout = git clone 'git+ssh://git.debian.org/git/apt/apt.git' 'apt'
 [Projects/Debian/dh-autoreconf]
 checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/dh-autoreconf.git' 'dh-autoreconf'
 
+[Projects/Debian/gnu-efi]
+checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/gummiboot.git' 'gummiboot'
+
 [Projects/Debian/gummiboot]
 checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/gummiboot.git' 'gummiboot'
 
