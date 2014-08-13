@@ -38,8 +38,14 @@ checkout = git clone 'git+ssh://git.debian.org/git/users/jak/cleanup.git' 'clean
 [Projects/Stable/jak-meta]
 checkout = git clone 'git+ssh://git.debian.org/git/users/jak/jak-meta.git' 'jak-meta'
 
+[Projects/Stable/letterman]
+checkout = git clone 'git@bitbucket.org:julian_klode/letterman.git' 'letterman'
+
 [Projects/Stable/simple-efi-boot]
 checkout = git clone 'git+ssh://git.debian.org/git/users/jak/simple-efi-boot.git' 'simple-efi-boot'
+
+[Projects/Stable/superuser]
+checkout = git clone 'git@github.com:julian-klode/bacon-superuser.git' 'superuser'
 
 [Projects/Debian/aptdaemon/debian-sid]
 checkout = bzr branch 'bzr+ssh://bzr.debian.org/bzr/apt/aptdaemon/debian-sid/' 'debian-sid'
