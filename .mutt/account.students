@@ -23,7 +23,7 @@ set delete=yes
 
 # Mailboxes
 unmailboxes *
-mailboxes +INBOX +Drafts +Sent +Trash +Archive
+mailboxes +INBOX +Drafts +Sent +Trash +Archive +spam
 
 macro index a "s=Archive\n" "Archive"
 macro pager a "s=Archive\n" "Archive"
