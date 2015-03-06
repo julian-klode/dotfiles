@@ -4,6 +4,8 @@ pull = update
 [DEFAULT]
 # Make the status command local only
 bzr_status = bzr status --short "$@"
+git_sethead = git checkout "@"
+git_reset = git reset "$@"
 
 [Projects/Debian/app-install-data]
 checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/app-install-data.git' 'app-install-data'
