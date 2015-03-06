@@ -182,3 +182,12 @@ with_proxy() {
 alias curl="with_proxy curl"
 alias wget="with_proxy wget"
 alias aria2c="with_proxy aria2c"
+
+readahead() {
+    pv "$@" > /dev/null
+}
+
+play() {
+    readahead "$@"
+    vlc "$@"
+}
