@@ -36,5 +36,4 @@ export EMAIL="Julian Andres Klode <jak@debian.org>"
 export DEBEMAIL="jak@debian.org"
 
 # Android development
-export PATH=$PATH:$HOME/Downloads/android-sdk-linux/platform-tools
-export PATH=$PATH:$HOME/Downloads/android-sdk-linux/tools
+export PATH=$HOME/Android/Sdk/platform-tools:$PATH
