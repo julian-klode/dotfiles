@@ -58,17 +58,8 @@ checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~aptdaemon-developers/aptd
 [Projects/Debian/dir2ogg]
 checkout = git clone 'github.com:julian-klode/dir2ogg.git' 'dir2ogg'
 
-[Projects/Debian/software-center/debian]
-checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~juliank/software-center/debian/' 'debian'
-
-[Projects/Debian/software-center/ubuntu]
-checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/%2Bbranch/software-center/' 'ubuntu'
-
 [Projects/Debian/software-properties/software-properties--debian]
 checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~juliank/software-properties/debian/' 'software-properties--debian'
 
 [Projects/Debian/software-properties/software-properties--ubuntu]
 checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/%2Bbranch/software-properties/' 'software-properties--ubuntu'
-
-[Projects/Debian/update-notifier/debian-sid]
-checkout = bzr branch 'bzr+ssh://bzr.debian.org/bzr/collab-maint/update-notifier/debian-sid/' 'debian-sid'
