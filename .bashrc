@@ -149,7 +149,7 @@ done
 alias git="_run_git git"
 alias gitg="_run_git gitg"
 
-alias debsign="debsign -k00823EC2"
+alias debsign="debsign -kjak@debian.org"
 alias diff="git diff --no-index --no-prefix"
 
 alias math="MUTT_ACCOUNT=math mutt"
