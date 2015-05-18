@@ -55,8 +55,8 @@ checkout = bzr branch 'bzr+ssh://bzr.debian.org/bzr/apt/aptdaemon/debian-sid/' '
 [Projects/Debian/aptdaemon/ubuntu-saucy]
 checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~aptdaemon-developers/aptdaemon/ubuntu-saucy/' 'ubuntu-saucy'
 
-[Projects/Debian/dir2ogg/main]
-checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~juliank/dir2ogg/main/' 'main'
+[Projects/Debian/dir2ogg]
+checkout = git clone 'github.com:julian-klode/dir2ogg.git' 'dir2ogg'
 
 [Projects/Debian/software-center/debian]
 checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~juliank/software-center/debian/' 'debian'
