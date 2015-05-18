@@ -7,9 +7,6 @@ bzr_status = bzr status --short "$@"
 git_sethead = git checkout "@"
 git_reset = git reset "$@"
 
-[Projects/Debian/app-install-data]
-checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/app-install-data.git' 'app-install-data'
-
 [Projects/Debian/apt]
 checkout = git clone 'git+ssh://git.debian.org/git/apt/apt.git' 'apt'
 
