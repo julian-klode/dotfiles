@@ -9,6 +9,7 @@ set smtp_pass=`/home/jak/.mutt/password.py julian.klode smtp.gmail.com smtp`
 
 # Generic setup
 set from="julian.klode@gmail.com"
+alternates ^jak@debian.org$ ^jak@jak-linux.org$ ^juliank@ubuntu.com$
 set spoolfile = "+INBOX"
 set postponed="+[Gmail]/Drafts"
 set trash="+[Gmail]/Trash"
