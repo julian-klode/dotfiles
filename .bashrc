@@ -191,3 +191,8 @@ play() {
     readahead "$@"
     vlc "$@"
 }
+
+striparch() {
+    new="${1/amd64/all}"
+    mergechanges -i "$1" "$1" | sponge "$new"
+}
