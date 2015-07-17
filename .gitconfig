@@ -12,3 +12,5 @@
 	driver = dpkg-mergechangelogs -m %O %A %B %A
 [tag]
 	sort = version:refname
+[gpg]
+	program = gpg2
