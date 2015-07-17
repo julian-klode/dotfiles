@@ -1,0 +1,12 @@
+def time[A](a: => A) : A = {
+    val n = 10000
+    var times = List[Long]()
+        for (_ <- 1 to n) {
+        val now = System.nanoTime
+        val res = a
+        times :::= List(System.nanoTime - now)
+    }
+    val result = times.sum / n
+    println("%d microseconds".format(result / 1000))
+    a
+}
