@@ -1,0 +1,4 @@
+[submodule ".ikiwiki"]
+	branch = plugin
+	path = .ikiwiki
+	url = git://anonscm.debian.org/git/users/jak/website.git
