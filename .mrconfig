@@ -7,6 +7,9 @@ bzr_status = bzr status --short "$@"
 git_sethead = git checkout "@"
 git_reset = git reset "$@"
 
+[Projects/website]
+checkout = git clone 'git.debian.org:public_git/website.git' 'website'
+
 [Projects/Debian/apt]
 checkout = git clone 'git+ssh://git.debian.org/git/apt/apt.git' 'apt'
 
