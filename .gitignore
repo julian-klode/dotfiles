@@ -62,6 +62,7 @@
 /.bazaar/shell-history
 /.ghc/ghci_history
 /.nano/*_history
+/.w3m/history
 
 # Evil stuff
 /.get_iplayer/
