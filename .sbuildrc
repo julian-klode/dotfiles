@@ -1,0 +1,11 @@
+# BUILD_ENVIRONMENT
+# Type: HASH:STRING
+# Environment to set during the build.	Defaults to setting PATH and
+# LD_LIBRARY_PATH only.  Note that these environment variables are not
+# subject to filtering with ENVIRONMENT_FILTER.  Example:
+#    $build_environment = {
+#            'CCACHE_DIR' => '/build/cache'
+#    };
+$build_environment = {
+	'DEB_BUILD_OPTIONS' => 'parallel=4'
+};
