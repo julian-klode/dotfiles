@@ -196,3 +196,8 @@ striparch() {
     new="${1/amd64/all}"
     mergechanges -i "$1" "$1" | sponge "$new"
 }
+
+
+alias python=python3
+alias ipython=ipython3
+alias ipython2=/usr/bin/ipython
