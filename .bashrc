@@ -201,3 +201,5 @@ striparch() {
 alias python=python3
 alias ipython=ipython3
 alias ipython2=/usr/bin/ipython
+alias pydoc=pydoc3
+alias pydoc2=/usr/bin/pydoc
