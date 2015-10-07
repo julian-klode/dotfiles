@@ -1,4 +1,8 @@
 #!/usr/bin/python
+import gi
+
+gi.require_version('GnomeKeyring', '1.0')
+
 from gi.repository import GObject, GnomeKeyring
 
 GObject.set_application_name("mutt")
