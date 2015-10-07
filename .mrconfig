@@ -17,7 +17,7 @@ checkout = git clone 'git+ssh://git.debian.org/git/apt/apt.git' 'apt'
 checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/dh-autoreconf.git' 'dh-autoreconf'
 
 [Projects/Debian/gnu-efi]
-checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/gummiboot.git' 'gummiboot'
+checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/gnu-efi.git' 'gnu-efi'
 
 [Projects/Debian/gummiboot]
 checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/gummiboot.git' 'gummiboot'
@@ -56,7 +56,7 @@ checkout = bzr branch 'bzr+ssh://bzr.debian.org/bzr/apt/aptdaemon/debian-sid/' '
 checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~aptdaemon-developers/aptdaemon/ubuntu-saucy/' 'ubuntu-saucy'
 
 [Projects/Debian/dir2ogg]
-checkout = git clone 'github.com:julian-klode/dir2ogg.git' 'dir2ogg'
+checkout = git clone 'git@github.com:julian-klode/dir2ogg.git' 'dir2ogg'
 
 [Projects/Debian/software-properties/software-properties--debian]
 checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~juliank/software-properties/debian/' 'software-properties--debian'
