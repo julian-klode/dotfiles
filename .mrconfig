@@ -63,3 +63,7 @@ checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~juliank/software-properti
 
 [Projects/Debian/software-properties/software-properties--ubuntu]
 checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/%2Bbranch/software-properties/' 'software-properties--ubuntu'
+
+
+[bin]
+checkout = git clone 'git@bitbucket.org:julian_klode/bin.git' 'bin'
