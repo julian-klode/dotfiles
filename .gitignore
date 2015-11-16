@@ -31,7 +31,11 @@
 /.subversion
 /.wine
 /.wxMaxima
-
+/.links2
+/.w3m
+/.swipl-dir-history
+/.scalaide
+/.adobe
 
 # Caches and friends
 /.cache
