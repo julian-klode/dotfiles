@@ -163,12 +163,6 @@ alias gmane="MUTT_ACCOUNT=news mutt"
 alias mr="mr -j5"
 alias kvm="qemu-system-x86_64 -enable-kvm"
 
-
-if [ -e /etc/profile.d/vte.sh ]; then
-    . /etc/profile.d/vte.sh
-fi
-
-
 # Seriously: Automatic proxy for curl, wget, aria2c!
 unset HTTP_PROXY
 unset NO_PROXY
