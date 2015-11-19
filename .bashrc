@@ -125,15 +125,14 @@ _run_git() {
 	env="env GIT_DIR=.hgit"
     fi
 
-    if [ -z "$($env git config --local --get user.email)" ]; then
-	echo "WARNING: No email adress specified" >&2
+    if echo "$@" | egrep -q 'commit|push'; then
+	if [ -z "$($env git config --local --get user.email)" ]; then
+	    echo "ERROR: No email adress specified" >&2
+	    return 1
+	fi
     fi
 
     $env "$@"
-
-    if [ -z "$($env git config --local --get user.email)" ]; then
-	echo "WARNING: No email adress specified" >&2
-    fi
 }
 
 # Debugging and development aliases aliases
