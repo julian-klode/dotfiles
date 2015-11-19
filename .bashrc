@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
 fi
 
 # Add git status to the terminal prompt
-if [ -e "/etc/bash_completion.d/git" -a -e "/usr/bin/git" ]; then
+if set 2>/dev/null | grep -q '__git_ps1 *('; then
 	PS1=${PS1:0:-3}'$(__git_ps1 ":%s")\$ '
 fi
 
