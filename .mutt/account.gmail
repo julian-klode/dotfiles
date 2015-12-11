@@ -12,7 +12,7 @@ set from="julian.klode@gmail.com"
 alternates ^jak@debian.org$ ^jak@jak-linux.org$ ^juliank@ubuntu.com$
 set spoolfile = "+INBOX"
 set postponed="+[Gmail]/Drafts"
-set trash="+[Gmail]/Trash"
+set trash="+[Gmail]/Bin"
 set record = ""
 
 # Other options
