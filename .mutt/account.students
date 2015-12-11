@@ -25,5 +25,5 @@ set delete=yes
 unmailboxes *
 mailboxes +INBOX +Drafts +Sent +Trash +Archive +spam
 
-macro index a "s=Archive\n" "Archive"
-macro pager a "s=Archive\n" "Archive"
+macro index,pager A "<clear-flag>Ns=Archive<enter>" "Archive"
+macro index,pager a "s=Archive<enter>" "Archive"

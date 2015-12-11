@@ -46,7 +46,7 @@ mailboxes +INBOX \
 
 
 # Macros
-macro index,pager A "<purge-message><sync-mailbox>" "Remove the label from the message"
+macro index,pager A "<clear-flag>N<purge-message>" "Remove the label from the message"
 macro index,pager a "<purge-message>" "Remove the label, do not sync"
 macro index,pager S "s=[Gmail]/Spam\n" "Mark as Spam"
 
