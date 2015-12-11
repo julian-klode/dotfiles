@@ -47,10 +47,10 @@ mailboxes +INBOX \
 
 # Macros
 macro pager	x "<exit><sync-mailbox>" "Goto index and sync mailbox"
-macro pager , "<purge-message><sync-mailbox>" "Remove the label from the message"
-macro index , "<purge-message><sync-mailbox>" "Remove the label from the message"
-macro pager . "<purge-message>" "Remove the label, do not sync"
-macro index . "<purge-message>" "Remove the label, do not sync"
+macro pager A "<purge-message><sync-mailbox>" "Remove the label from the message"
+macro index A "<purge-message><sync-mailbox>" "Remove the label from the message"
+macro pager a "<purge-message>" "Remove the label, do not sync"
+macro index a "<purge-message>" "Remove the label, do not sync"
 macro pager l "<list-reply>" "Reply to list"
 macro pager S "s=[Gmail]/Spam\n" "Mark as Spam"
 macro index S "s=[Gmail]/Spam\n" "Mark as Spam"
