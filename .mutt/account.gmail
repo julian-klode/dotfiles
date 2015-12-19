@@ -1,11 +1,11 @@
 # IMAP server
 set folder="imaps://imap.gmail.com:993"
 set imap_user="julian.klode@gmail.com"
-set imap_pass=`/home/jak/.mutt/password.py julian.klode imap.gmail.com imapx`
+set imap_pass=`sed -nr 's/password=(.*)/\1/p' ~/Private/esmtprc`
 
 # SMTP server
 set smtp_url="smtp://julian.klode@gmail.com@smtp.gmail.com:587"
-set smtp_pass=`/home/jak/.mutt/password.py julian.klode smtp.gmail.com smtp`
+set smtp_pass=`sed -nr 's/password=(.*)/\1/p' ~/Private/esmtprc`
 
 # Generic setup
 set from="julian.klode@gmail.com"
