@@ -14,3 +14,8 @@
 	sort = version:refname
 [gpg]
 	program = gpg2
+
+# SSH everywhere
+[url "git@github.com:"]
+  insteadOf = "git://github.com/"
+  insteadOf = "https://github.com/"
