@@ -1,4 +1,4 @@
 [submodule ".ikiwiki"]
 	branch = plugin
 	path = .ikiwiki
-	url = git://anonscm.debian.org/git/users/jak/website.git
+	url = https://github.com/julian-klode/jak-linux.org
