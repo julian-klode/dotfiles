@@ -175,10 +175,12 @@ with_proxy() {
     fi
 }
 
+# Download tools
 alias curl="with_proxy curl"
 alias wget="with_proxy wget"
 alias aria2c="with_proxy aria2c"
 
+# Random stuff
 readahead() {
     pv "$@" > /dev/null
 }
@@ -193,9 +195,12 @@ striparch() {
     mergechanges -i "$1" "$1" | sponge "$new"
 }
 
-
+# Python
 alias python=python3
 alias ipython=ipython3
 alias ipython2=/usr/bin/ipython
 alias pydoc=pydoc3
 alias pydoc2=/usr/bin/pydoc
+
+# GPG
+alias gpg=gpg2
