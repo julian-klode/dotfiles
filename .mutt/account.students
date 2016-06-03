@@ -17,13 +17,16 @@ set record="+Sent"
 
 # Other options
 set move=no
-set copy=no
+set copy=yes
 set markers=no
 set delete=yes
 
 # Mailboxes
 unmailboxes *
 mailboxes +INBOX +Drafts +Sent +Trash +Archive +spam
+
+# Decode RFC2047-encoded attachment file names
+set rfc2047_parameters
 
 macro index,pager A "<clear-flag>Ns=Archive<enter>" "Archive"
 macro index,pager a "s=Archive<enter>" "Archive"

@@ -25,6 +25,7 @@ set delete=yes
 unmailboxes *
 mailboxes +INBOX +Drafts +Sent +Trash +Archive
 
+# Decode RFC2047-encoded attachment file names
 set rfc2047_parameters
 
 macro index,pager A "<clear-flag>Ns=Archive<enter>" "Archive"
