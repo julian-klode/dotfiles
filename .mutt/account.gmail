@@ -91,3 +91,5 @@ send-hook '~C @vger.kernel.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linu
 
 send-hook '~C ^.*debian\.org$' 'my_hdr From: Julian Andres Klode <jak@debian.org>'
 send-hook '~C ^.*debian\.org$' 'my_hdr Message-ID: <`date +"%Y%m%d%H%M%S"`.GA`echo $PPID`@debian.org>'
+send-hook '~C ^.*debconf\.org$' 'my_hdr From: Julian Andres Klode <jak@debian.org>'
+send-hook '~C ^.*debconf\.org$' 'my_hdr Message-ID: <`date +"%Y%m%d%H%M%S"`.GA`echo $PPID`@debian.org>'
