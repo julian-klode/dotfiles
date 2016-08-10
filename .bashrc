@@ -204,3 +204,9 @@ alias pydoc2=/usr/bin/pydoc
 
 # GPG
 alias gpg=gpg2
+
+
+# Ubuntu
+alias u="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\" schroot -p -c devel --"
+alias xenial="env LANG=C.UTF-8   LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com  EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\" schroot -p -c xenial --"
+alias yakkety="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\" schroot -p -c yakkety --"
