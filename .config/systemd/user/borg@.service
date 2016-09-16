@@ -1,0 +1,8 @@
+[Unit]
+Description=Run borg backup
+ConditionACPower=true
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/bou "%i" cron
+IOSchedulingClass=idle
