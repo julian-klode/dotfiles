@@ -3,7 +3,7 @@ Description=Backups every two hours
 
 [Timer]
 OnCalendar=*-*-* 9,11,13,15,17,19,21,23,01:00:00
-AccuracySec=45min
+AccuracySec=5min
 Persistent=true
 
 [Install]
