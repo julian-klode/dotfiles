@@ -9,7 +9,7 @@
 	default = simple
 [merge "dpkg-mergechangelogs"]
 	name = debian/changelog merge driver
-	driver = dpkg-mergechangelogs -m %O %A %B %A
+	driver = dpkg-mergechangelogs %O %A %B %A
 [merge "merge-po"]
 	name = po merger
 	driver = git-merge-po.sh %O %A %B
