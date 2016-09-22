@@ -20,6 +20,7 @@ set sort_aux='last-date-received'
 set index_format="%4C %Z %{%b %d} %-30.30L (%?l?%4l&%4c?) %s"
 set reverse_name=yes
 set imap_keepalive=300
+set sidebar_visible=yes
 
 # File formats
 auto_view text/html application/pdf
