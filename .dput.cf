@@ -1,18 +1,3 @@
-[people.debian.org]
-fqdn = people.debian.org
-method = rsync
-login = *
-incoming = ~/public_html/debian/mini-dinstall/incoming
-post_upload_command = ssh people.debian.org mini-dinstall -b; rsign
-
-[ac100]
-fqdn = people.debian.org
-method = rsync
-login = *
-incoming = ~/public_html/ac100/.incoming
-post_upload_command = ssh people.debian.org bin/mkrepo public_html/ac100 && \
-                      rsign people.debian.org public_html/ac100/dists/unreleased/Release public_html/ac100/dists/unreleased/Release.gpg -b && \
-                      rsign people.debian.org public_html/ac100/dists/unreleased/Release public_html/ac100/dists/unreleased/InRelease --clearsign
 [people]
 fqdn = people.debian.org
 method = rsync
@@ -21,21 +6,3 @@ incoming = ~/public_html/debian/.incoming
 post_upload_command = ssh people.debian.org bin/mkrepo public_html/debian && \
                       rsign people.debian.org public_html/debian/dists/squeeze/Release public_html/debian/dists/squeeze/Release.gpg -b && \
                       rsign people.debian.org public_html/debian/dists/squeeze/Release public_html/debian/dists/squeeze/InRelease --clearsign
-[java]
-fqdn = people.debian.org
-method = local
-login = *
-incoming = ~/Projects/Stable/Java/Repository/.incoming
-post_upload_command = set -e && ~/Projects/Stable/Java/Repository/.apt-ftparchive/mkrepo ~/Projects/Stable/Java/Repository/ && \
-                      for dist in ~/Projects/Stable/Java/Repository/dists/*/; do \
-                        gpg -asb < $dist/Release > $dist/Release.gpg; \
-                        gpg -as --clearsign < $dist/Release > $dist/InRelease; \
-                      done && \
-                      sitecopy -u java
-
-[ppa:deity/ubuntu-tests]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = ~deity/ubuntu-tests/ubuntu/
-login = anonymous
-allow_unsigned_uploads = 0
