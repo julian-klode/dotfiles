@@ -210,4 +210,5 @@ alias gpg=gpg2
 alias u="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\" schroot -p -c devel --"
 alias xenial="env LANG=C.UTF-8   LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com  EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\" schroot -p -c xenial --"
 alias yakkety="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\" schroot -p -c yakkety --"
+alias trusty="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\" schroot -p -c trusty --"
 alias df="df --exclude-type=tmpfs --exclude-type=devtmpfs --exclude-type=ecryptfs --exclude-type=encfs"
