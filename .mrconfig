@@ -4,8 +4,10 @@ pull = update
 [DEFAULT]
 # Make the status command local only
 bzr_status = bzr status --short "$@"
-git_sethead = git checkout "@"
+git_sethead = git checkout "$@"
 git_reset = git reset "$@"
+git_describe = git describe "$@"
+git_show = git show "$@"
 
 [Projects/website]
 checkout = git clone 'git.debian.org:public_git/website.git' 'website'
