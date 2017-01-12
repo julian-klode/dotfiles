@@ -37,3 +37,7 @@ export DEBEMAIL="jak@debian.org"
 
 # Android development
 export PATH=$HOME/Android/Sdk/platform-tools:$PATH
+# Go development
+export GOPATH="$HOME/Projects/Go"
+
+_byobu_sourced=1 . /usr/bin/byobu-launch
