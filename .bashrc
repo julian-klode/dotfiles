@@ -169,7 +169,7 @@ unset NO_PROXY
 with_proxy() {
     http_proxy=$(echo http://example.com | proxy)
     if [ "$http_proxy" = "direct://" ]; then
-	"$@"
+	env -u http_proxy "$@"
     else
 	env "http_proxy=$http_proxy" "$@"
     fi
