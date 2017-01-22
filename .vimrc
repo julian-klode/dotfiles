@@ -5,3 +5,4 @@ nnoremap <S-F8> :sbprevious<CR>
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+set mouse=a
