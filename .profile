@@ -39,5 +39,7 @@ export DEBEMAIL="jak@debian.org"
 export PATH=$HOME/Android/Sdk/platform-tools:$PATH
 # Go development
 export GOPATH="$HOME/Projects/Go"
+# CMake
+export CTEST_OUTPUT_ON_FAILURE=1
 
 _byobu_sourced=1 . /usr/bin/byobu-launch
