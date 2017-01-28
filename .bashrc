@@ -196,6 +196,11 @@ striparch() {
     mergechanges -i "$1" "$1" | sponge "$new"
 }
 
+atom() {
+    command atom $(git rev-parse --show-toplevel 2>/dev/null) "$@"
+    return $?
+}
+
 # Python
 alias python=python3
 alias ipython=ipython3
