@@ -164,8 +164,9 @@ alias mr="mr -j5"
 alias kvm="qemu-system-x86_64 -enable-kvm"
 
 # Seriously: Automatic proxy for curl, wget, aria2c!
-unset HTTP_PROXY
-unset NO_PROXY
+unset HTTP_PROXY http_proxy
+unset HTTPS_PROXY https_proxy
+unset NO_PROXY no_proxy
 with_proxy() {
     http_proxy=$(echo http://example.com | proxy)
     if [ "$http_proxy" = "direct://" ]; then
