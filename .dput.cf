@@ -1,6 +1,6 @@
 [people]
 fqdn = people.debian.org
-method = rsync
+method = sftp
 login = *
 incoming = ~/public_html/debian/.incoming
 post_upload_command = ssh people.debian.org bin/mkrepo public_html/debian && \
