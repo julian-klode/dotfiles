@@ -26,3 +26,6 @@
 [url "git@bitbucket.org:"]
 	insteadOf = "git://bitbucket.org/"
 	insteadOf = "https://bitbucket.org/"
+
+[url "git+ssh://git.debian.org/"]
+	insteadOf = "https://anonscm.debian.org/"
