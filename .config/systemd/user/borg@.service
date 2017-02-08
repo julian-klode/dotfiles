@@ -1,6 +1,8 @@
 [Unit]
 Description=Run borg backup
 ConditionACPower=true
+Requires=NetworkManager-wait-online.service
+After=NetworkManager-wait-online.service
 
 [Service]
 Type=oneshot
