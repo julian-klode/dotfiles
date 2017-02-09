@@ -1,8 +1,8 @@
 [Unit]
 Description=Run borg backup
 ConditionACPower=true
-Requires=NetworkManager-wait-online.service
-After=NetworkManager-wait-online.service
+Requires=nm-online-exit.service
+After=nm-online-exit.service
 
 [Service]
 Type=oneshot
