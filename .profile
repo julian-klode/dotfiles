@@ -17,7 +17,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Set the default path to the one for root, with games added
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/snap/bin"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
