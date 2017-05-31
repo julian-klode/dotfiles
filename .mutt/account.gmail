@@ -8,8 +8,6 @@ set smtp_url="smtp://julian.klode@gmail.com@smtp.gmail.com:587"
 set smtp_pass=`sed -nr 's/password=(.*)/\1/p' ~/Private/esmtprc`
 
 # Generic setup
-set from="julian.klode@gmail.com"
-alternates ^jak@debian.org$ ^jak@jak-linux.org$ ^juliank@ubuntu.com$
 set spoolfile = "+INBOX"
 set postponed="+[Gmail]/Drafts"
 set trash="+[Gmail]/Bin"
@@ -53,43 +51,5 @@ macro index,pager S "s=[Gmail]/Spam\n" "Mark as Spam"
 macro pager	x "<exit><sync-mailbox>" "Goto index and sync mailbox"
 macro pager l "<list-reply>" "Reply to list"
 
-# Configure mailing lists
-lists       .*@lists.debian.org \
-            .*@lists.ubuntu.com \
-            [0-9]+@bugs.debian.org \
-            .*@lists.launchpad.net \
-            .*@lists.spi-inc.org \
-            .*@lists.alioth.debian.org \
-            devel@linuxdriverproject.org \
-            .*@vger.kernel.org
 
-subscribe   debian-devel-announce@lists.debian.org \
-            debian-announce@lists.debian.org \
-            debian-infrastructure-announce@lists.debian.org \
-            debian-security-announce@lists.debian.org \
-            debian-backports@lists.debian.org \
-            debian-private@lists.debian.org \
-            deity@lists.debian.org \
-            spi-private@lists.spi-inc.org \
-            pkg-meego-maintainers@lists.alioth.debian.org \
-            ac100@lists.launchpad.net \
-            devel@linuxdriverproject.org
-
-
-# Automatically choose the correct sender
-send-hook . 'unmy_hdr From:'
-send-hook . 'unmy_hdr Message-ID:'
-
-send-hook '~C ^.*[.@]ubuntu.com$' 'my_hdr From: Julian Andres Klode <juliank@ubuntu.com>'
-send-hook '~C ^.*[.@]canonical.com$' 'my_hdr From: Julian Andres Klode <juliank@ubuntu.com>'
-
-send-hook '~C ^.*gnome\.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
-send-hook '~C ^ac100@lists.launchpad.net\.net$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
-send-hook '~C ^devel@linuxdriverproject\.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
-send-hook '~C ^devel@driverdev\.osuosl\.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
-send-hook '~C @vger.kernel.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
-
-send-hook '~C ^.*debian\.org$' 'my_hdr From: Julian Andres Klode <jak@debian.org>'
-send-hook '~C ^.*debian\.org$' 'my_hdr Message-ID: <`date +"%Y%m%d%H%M%S"`.GA`echo $PPID`@debian.org>'
-send-hook '~C ^.*debconf\.org$' 'my_hdr From: Julian Andres Klode <jak@debian.org>'
-send-hook '~C ^.*debconf\.org$' 'my_hdr Message-ID: <`date +"%Y%m%d%H%M%S"`.GA`echo $PPID`@debian.org>'
+source ~/.mutt/account.gmail-common
