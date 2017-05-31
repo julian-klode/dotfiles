@@ -1,0 +1,48 @@
+# Copyright (C) 2013 Julian Andres Klode
+#
+# Main configuration file. Generic options.
+#
+
+# Generic variables settings
+set header_cache=~/.cache/mutt/headers
+set message_cachedir=~/.cache/mutt/bodies
+set certificate_file=~/.cache/mutt/certificates
+set imap_idle=yes
+set xterm_set_titles=yes
+set timeout=15
+set mail_check=600
+set crypt_autosign=no
+set crypt_replysign=yes
+set crypt_use_gpgme=yes
+set crypt_autosmime=no
+set sort='threads'
+set sort_aux='last-date-received'
+set index_format="%4C %Z %{%b %d} %-30.30L (%?l?%4l&%4c?) %s"
+set reverse_name=yes
+set imap_keepalive=300
+set sidebar_visible=yes
+
+# File formats
+auto_view text/html application/pdf
+alternative_order text/plain text/html
+
+# Color settings
+color index brightyellow black ~N
+color index magenta black ~F
+color index blue black ~T
+color index red black ~D
+color sidebar_new yellow default
+
+# Key bindings
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
+bind index "i" imap-fetch-mail
+
+# Mail view
+ignore *
+unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package User-Agent X-Mailer Newsgroups
+
+auto_view text/html
+alternative_order text/plain text/html

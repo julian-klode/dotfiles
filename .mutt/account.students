@@ -1,3 +1,5 @@
+# Base files
+source ~/.mutt/muttrc.common
 
 # IMAP server
 set folder="imaps://imap.students.uni-marburg.de"

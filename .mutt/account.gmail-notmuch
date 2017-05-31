@@ -1,4 +1,5 @@
 # Base files
+source ~/.mutt/muttrc.common
 source ~/.mutt/account.gmail-common
 
 # Mailbox setup

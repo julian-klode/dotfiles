@@ -1,4 +1,6 @@
 # Configuration for reading mailing lists via gmane
+# Base files
+source ~/.mutt/muttrc.common
 
 # Generic setup
 set news_cache_dir="~/.cache/mutt/news/"

@@ -1,3 +1,6 @@
+# Base files
+source ~/.mutt/muttrc.common
+
 # IMAP server
 set folder="imaps://imap.mathematik.uni-marburg.de"
 set imap_user="klode"
