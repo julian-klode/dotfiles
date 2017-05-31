@@ -19,7 +19,7 @@ virtual-mailboxes \
     "GNOME" "notmuch://?query=tag:GNOME" \
     "Launchpad" "notmuch://?query=tag:Launchpad" \
     "Privat" "notmuch://?query=tag:Privat" \
-    "Privat/1&1" "notmuch://?query=tag:Privat/1&1" \
+    "Privat/1&1" "notmuch://?query=tag:Privat/1%25261" \
     "Privat/Amazon" "notmuch://?query=tag:Privat/Amazon" \
     "Privat/O2" "notmuch://?query=tag:Privat/O2" \
     "Privat/Strato" "notmuch://?query=tag:Privat/Strato" \
