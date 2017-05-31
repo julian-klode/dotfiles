@@ -59,6 +59,8 @@ tag-transforms  \
     "trash" "♲" \
     "replied" "↻ "  \
     "encrypted" "🔒" \
+    "before-zero" "0" \
+    "later" "L" \
     "signed" "S" \
     "sent"    "➥"  \
 
