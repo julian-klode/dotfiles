@@ -33,7 +33,7 @@ macro index,pager \# "<modify-labels-then-hide>+trash<enter>" "Send to trash"
 macro index,pager d "<modify-labels-then-hide>+trash<enter>" "Send to trash"
 macro index,pager U "<modify-labels>+unread<enter>"        # tag as Archived
 macro index,pager u "<modify-labels-then-hide>-trash<enter>"        # tag as Archived
-macro index,pager ! "<modify-labels>+spam<enter>"        # tag as Archived
+macro index,pager ! "<modify-labels-then-hide>+spam<enter>"        # tag as Archived
 macro index,pager .gi "<change-vfolder>INBOX<enter>" "Go to inbox"
 macro index,pager .gs "<change-vfolder>Starred<enter>" "Go to inbox"
 macro index,pager .gt "<change-vfolder>Sent<enter>" "Go to inbox"
