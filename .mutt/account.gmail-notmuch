@@ -1,3 +1,6 @@
+# Base files
+source ~/.mutt/account.gmail-common
+
 # Mailbox setup
 set nm_default_uri="notmuch:///home/jak/mail" # path to the maildir
 set virtual_spoolfile=yes                          # enable virtual folders
@@ -69,5 +72,3 @@ unignore Tags
 
 # Sidebar format: Show message count
 set sidebar_format="%B%* %?N?%N/?%S"
-
-source ~/.mutt/account.gmail-common

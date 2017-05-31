@@ -1,3 +1,6 @@
+# Base files
+source ~/.mutt/account.gmail-common
+
 # IMAP server
 set folder="imaps://imap.gmail.com:993"
 set imap_user="julian.klode@gmail.com"
@@ -50,6 +53,3 @@ macro index,pager S "s=[Gmail]/Spam\n" "Mark as Spam"
 
 macro pager	x "<exit><sync-mailbox>" "Goto index and sync mailbox"
 macro pager l "<list-reply>" "Reply to list"
-
-
-source ~/.mutt/account.gmail-common
