@@ -1,0 +1,8 @@
+[Unit]
+Description=Sync gmail every 5 minutes
+
+[Timer]
+OnCalendar=*:3/5
+
+[Install]
+WantedBy=timers.target

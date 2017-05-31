@@ -1,0 +1,14 @@
+[Unit]
+Description=Sync gmail
+ConditionACPower=true
+Requires=nm-online-exit.service
+After=nm-online-exit.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/jak/Downloads/gmailieer/gmi sync
+WorkingDirectory=/home/jak/mail/account.gmail/
+IOSchedulingClass=idle
+
+[Install]
+WantedBy=default.target
