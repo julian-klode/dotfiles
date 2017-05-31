@@ -1,6 +1,5 @@
 [Unit]
 Description=Sync gmail
-ConditionACPower=true
 Requires=nm-online-exit.service
 After=nm-online-exit.service
 
