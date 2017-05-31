@@ -136,6 +136,7 @@ _run_git() {
 }
 
 # Debugging and development aliases aliases
+alias hgit="command git --git-dir=$HOME/.hgit --work-tree=$HOME"
 alias valgrind="dbg-env valgrind"
 alias gdb="dbg-env gdb"
 alias strace="dbg-env strace"
