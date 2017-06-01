@@ -22,6 +22,9 @@ set reverse_name=yes
 set imap_keepalive=300
 set sidebar_visible=yes
 
+# Default directory setup
+set record="~/mail/outbox"
+
 # File formats
 auto_view text/html application/pdf
 alternative_order text/plain text/html
