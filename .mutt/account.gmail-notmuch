@@ -31,8 +31,19 @@ virtual-mailboxes \
 
 
 # Gmail bindings
+
+# These depend on the current mailbox if they want to hide emails that have
+# their label removed.
+folder-hook '.' 'macro index,pager e "<modify-labels>-inbox -before-zero -Later<enter>"        # tag as Archived'
+folder-hook 'inbox|before-zero|Later' 'macro index,pager e "<modify-labels-then-hide>-inbox -before-zero -Later<enter>"        # tag as Archived'
+
+folder-hook '.' 'macro index,pager .tl "<modify-labels>-inbox -before-zero +Later<enter>" "Tag later"'
+folder-hook 'inbox|before-zero' 'macro index,pager .tl "<modify-labels-then-hide>-inbox -before-zero +Later<enter>" "Tag later"'
+
+folder-hook '.' 'macro index,pager .ti "<modify-labels>+inbox -before-zero -Later<enter>" "Tag inbox"'
+folder-hook 'before-zero|Later' 'macro index,pager .ti "<modify-labels-then-hide>+inbox -before-zero -Later<enter>" "Tag inbox"'
+
 macro index,pager F "<vfolder-from-query>"              # looks up a hand made query
-macro index,pager e "<modify-labels>-inbox -before-zero -Later<enter>"        # tag as Archived
 macro index,pager \# "<modify-labels-then-hide>+trash<enter>" "Send to trash"
 macro index,pager d "<modify-labels-then-hide>+trash<enter>" "Send to trash"
 macro index,pager U "<modify-labels>+unread<enter>"        # tag as Archived
@@ -42,8 +53,7 @@ macro index,pager .gi "<change-vfolder>INBOX<enter>" "Go to inbox"
 macro index,pager .gs "<change-vfolder>Starred<enter>" "Go to inbox"
 macro index,pager .gt "<change-vfolder>Sent<enter>" "Go to inbox"
 macro index,pager .ga "<vfolder-from-query>*<enter>" "Go to inbox"
-macro index,pager .tl "<modify-labels>-inbox -before-zero +Later<enter>" "Go to inbox"
-macro index,pager .ti "<modify-labels>+inbox -before-zero -Later<enter>" "Go to inbox"
+
 macro index,pager ./ "<vfolder-from-query>" "Go to inbox"
 macro index,pager i "<sync-mailbox><shell-escape>cd /home/jak/mail/account.gmail && gmi sync<enter>" "Synchronize gmail"
 
