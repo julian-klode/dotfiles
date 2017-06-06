@@ -84,5 +84,8 @@ unignore Tags
 # Sidebar format: Show message count
 set sidebar_format="%B%* %?N?%N/?%S"
 
+# Notifications
+set new_mail_command="notify-send --hint=int:transient:1 --icon='/home/jak/.local/share/icons/mutt.png' 'New Email in %f' '%n new messages, %u unread.' &"
+
 # Address book
 set query_command="notmuch-addrlookup --mutt '%s'"
