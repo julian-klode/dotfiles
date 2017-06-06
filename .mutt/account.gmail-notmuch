@@ -83,3 +83,6 @@ unignore Tags
 
 # Sidebar format: Show message count
 set sidebar_format="%B%* %?N?%N/?%S"
+
+# Address book
+set query_command="notmuch-addrlookup --mutt '%s'"
