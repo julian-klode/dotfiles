@@ -4,5 +4,5 @@ Documentation=man:nm-online(1)
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/nm-online -q --timeout=30
+ExecStart=/usr/bin/nm-online -q --timeout=300
 RemainAfterExit=no
