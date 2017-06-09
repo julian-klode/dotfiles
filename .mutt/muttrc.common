@@ -43,6 +43,10 @@ bind index,pager \CO sidebar-open
 macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
 bind index "i" imap-fetch-mail
 
+# Swap Ctrl+T and Tab meanings, so we can auto-complete with <Tab>
+bind editor <Tab> complete-query
+bind editor ^T complete
+
 # Mail view
 ignore *
 unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package User-Agent X-Mailer Newsgroups
