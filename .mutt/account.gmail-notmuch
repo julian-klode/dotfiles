@@ -43,6 +43,7 @@ folder-hook 'inbox|before-zero' 'macro index,pager .tl "<modify-labels-then-hide
 folder-hook '.' 'macro index,pager .ti "<modify-labels>+inbox -before-zero -Later<enter>" "Tag inbox"'
 folder-hook 'before-zero|Later' 'macro index,pager .ti "<modify-labels-then-hide>+inbox -before-zero -Later<enter>" "Tag inbox"'
 
+bind index,pager . noop
 macro index,pager F "<vfolder-from-query>"              # looks up a hand made query
 macro index,pager \# "<modify-labels-then-hide>+trash<enter>" "Send to trash"
 macro index,pager d "<modify-labels-then-hide>+trash<enter>" "Send to trash"
