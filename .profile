@@ -43,4 +43,7 @@ export PATH="$GOPATH/bin:$PATH"
 # CMake
 export CTEST_OUTPUT_ON_FAILURE=1
 
+# Qt sucks
+export QT_STYLE_OVERRIDE=Adwaita-Dark
+
 _byobu_sourced=1 . /usr/bin/byobu-launch
