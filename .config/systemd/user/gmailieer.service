@@ -5,7 +5,7 @@ After=nm-online-exit.service
 
 [Service]
 Type=oneshot
-ExecStart=/home/jak/Downloads/gmailieer/gmi sync
+ExecStart=/home/jak/Projects/Debian/gmailieer/gmi sync
 WorkingDirectory=/home/jak/mail/account.gmail/
 IOSchedulingClass=idle
 
