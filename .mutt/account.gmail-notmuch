@@ -66,7 +66,6 @@ bind index,pager 2 next-unread
 bind index,pager 8 previous-unread
 
 # Hide tags we don't care about and exclude trash and spam by default
-set nm_hidden_tags="unread,draft,flagged,passed,replied,attachment,important"
 set nm_exclude_tags="trash,spam"
 
 # Index formatting
