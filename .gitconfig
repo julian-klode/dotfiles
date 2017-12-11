@@ -15,8 +15,6 @@
 	driver = git-merge-po.sh %O %A %B
 [tag]
 	sort = version:refname
-[gpg]
-	program = gpg2
 
 # SSH everywhere
 [url "git@github.com:"]
