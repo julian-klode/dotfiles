@@ -217,7 +217,7 @@ alias yakkety="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com EMAIL
 alias trusty="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\" schroot -p -c trusty --"
 alias zesty="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBEMAIL=juliank@ubuntu.com EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\" schroot -p -c zesty --"
 alias jessie="env LANG=C.UTF-8 LC_ALL=C.UTF-8 schroot -p -c jessie --"
-alias df="df --exclude-type=tmpfs --exclude-type=devtmpfs --exclude-type=ecryptfs --exclude-type=encfs"
+alias df="df --exclude-type=tmpfs --exclude-type=devtmpfs --exclude-type=ecryptfs --exclude-type=encfs --exclude=squashfs"
 
 alias pastebinit="env -i pastebinit"
 # Add mosh alias
