@@ -32,8 +32,13 @@ fi
 
 # Setup stuff for email and co
 export EDITOR="editor"
-export EMAIL="Julian Andres Klode <jak@debian.org>"
-export DEBEMAIL="jak@debian.org"
+if dpkg-vendor --derives-from ubuntu; then
+	export EMAIL="Julian Andres Klode <juliank@ubuntu.com>"
+	export DEBEMAIL="juliank@ubuntu.com"
+else
+	export EMAIL="Julian Andres Klode <jak@debian.org>"
+	export DEBEMAIL="jak@debian.org"
+fi
 
 # Android development
 export PATH=$HOME/Android/Sdk/platform-tools:$PATH
