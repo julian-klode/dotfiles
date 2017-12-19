@@ -2,6 +2,10 @@
 # Base files
 source ~/.mutt/muttrc.common
 
+set smtp_url="smtp://julian.klode@gmail.com@smtp.gmail.com:587"
+set smtp_pass=`sed -nr 's/password=(.*)/\1/p' ~/Private/esmtprc`
+
+
 # Generic setup
 set news_cache_dir="~/.cache/mutt/news/"
 set sidebar_visible=yes
