@@ -36,6 +36,9 @@
 /.swipl-dir-history
 /.scalaide
 /.adobe
+/.etr
+/.dlv
+/.vscode
 
 # Caches and friends
 /.cache
@@ -51,6 +54,8 @@
 /.sbt
 /.ivy2/cache
 /.newsrc
+/.thumbnails
+
 
 # Sockets and friends
 /.ICEauthority
