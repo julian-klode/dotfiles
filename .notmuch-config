@@ -10,6 +10,7 @@
 # Notmuch will store its database within a sub-directory of the path
 # configured here named ".notmuch".
 #
+
 [database]
 path=/home/jak/mail
 
@@ -28,6 +29,7 @@ path=/home/jak/mail
 # recipient list of replies, and will set the From address based on the
 # address to which the original email was addressed.
 #
+
 [user]
 name=Julian Andres Klode
 primary_email=Julian Andres Klode <jak@debian.org>
@@ -47,6 +49,7 @@ other_email=jak@jak-linux.org;julian.klode@gmail.com;jak@jak-software.de;juliank
 #		names will be ignored, independent of its depth/location
 #		in the mail store.
 #
+
 [new]
 tags=
 ignore=*.json;
@@ -60,6 +63,7 @@ ignore=*.json;
 #		search results by default.  Using an excluded tag in a
 #		query will override that exclusion.
 #
+
 [search]
 exclude_tags=trash;spam;
 
@@ -84,8 +88,9 @@ exclude_tags=trash;spam;
 #	and update tags, while the "notmuch tag" and "notmuch restore"
 #	commands will notice tag changes and update flags in filenames
 #
+
 [maildir]
-synchronize_flags=true
+synchronize_flags=false
 
 # Cryptography related configuration
 #
@@ -94,5 +99,6 @@ synchronize_flags=true
 #	gpg_path
 #		binary name or full path to invoke gpg.
 #
+
 [crypto]
 gpg_path=gpg
