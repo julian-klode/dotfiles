@@ -53,3 +53,13 @@ unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package
 
 auto_view text/html
 alternative_order text/plain text/html
+
+auto_view text/x-diff
+auto_view text/x-patch
+
+
+# Language header
+my_hdr Accept-Language: de-DE, de, en-GB, en-US, en
+unignore Accept-Language
+color header red black ^Accept-Language:
+color header green black ^Accept-Language:.*(de|en)
