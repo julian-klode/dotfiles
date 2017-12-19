@@ -32,3 +32,4 @@ set post_moderated=ask-yes	     # Post articles to moderated newsgroups?
 set followup_to_poster=ask-yes
 
 bind index "i" change-newsgroup
+bind index "+" reconstruct-thread
