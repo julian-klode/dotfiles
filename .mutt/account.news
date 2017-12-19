@@ -18,7 +18,9 @@ set spoolfile="+gmane.linux.debian.devel.general"
 
 mailboxes +gmane.linux.debian.devel.general \
           +gmane.linux.debian.devel.project \
-          +gmane.linux.debian.devel.vote
+          +gmane.linux.debian.devel.vote \
+          +gmane.linux.kernel \
+          +gmane.linux.drivers.platform.x86.devel
 
 # Behaviour
 set catchup_newsgroup=ask-yes      # catchup articles when leaving newsgroup
