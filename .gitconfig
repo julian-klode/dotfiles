@@ -27,3 +27,6 @@
 
 [url "git+ssh://git.debian.org/"]
 	insteadOf = "https://anonscm.debian.org/"
+
+[url "git@salsa.debian.org:"]
+	insteadOf = "https://salsa.debian.org/"
