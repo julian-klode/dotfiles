@@ -2,8 +2,8 @@
 source ~/.mutt/muttrc.common
 
 # SMTP server
-set from="julian.andres.klode@canonical.com"
-set smtp_url="smtp://julian.andres.klode@canonical.com@smtp.gmail.com:587"
+set from="julian.klode@canonical.com"
+set smtp_url="smtp://julian.klode@canonical.com@smtp.gmail.com:587"
 set smtp_pass=`cat ~/Private/canonical-smtp`
 
 # Mailbox setup
