@@ -34,5 +34,5 @@
 	lpuser = juliank
 
 [url "git+ssh://juliank@git.launchpad.net/"]
-        insteadof = lp:
-
+    insteadOf = lp:
+    insteadOf = https://git.launchpad.net/
