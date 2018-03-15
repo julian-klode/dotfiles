@@ -51,12 +51,5 @@ checkout = git clone 'git@github.com:julian-klode/bacon-superuser.git' 'superuse
 [Projects/Debian/dir2ogg]
 checkout = git clone 'git@github.com:julian-klode/dir2ogg.git' 'dir2ogg'
 
-[Projects/Debian/software-properties/software-properties--debian]
-checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~juliank/software-properties/debian/' 'software-properties--debian'
-
-[Projects/Debian/software-properties/software-properties--ubuntu]
-checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/%2Bbranch/software-properties/' 'software-properties--ubuntu'
-
-
 [bin]
 checkout = git clone 'git@bitbucket.org:julian_klode/bin.git' 'bin'
