@@ -48,12 +48,6 @@ checkout = git clone 'git@bitbucket.org:julian_klode/letterman.git' 'letterman'
 [Projects/Stable/superuser]
 checkout = git clone 'git@github.com:julian-klode/bacon-superuser.git' 'superuser'
 
-[Projects/Debian/aptdaemon/debian-sid]
-checkout = bzr branch 'bzr+ssh://bzr.debian.org/bzr/apt/aptdaemon/debian-sid/' 'debian-sid'
-
-[Projects/Debian/aptdaemon/ubuntu-saucy]
-checkout = bzr branch 'bzr+ssh://bazaar.launchpad.net/~aptdaemon-developers/aptdaemon/ubuntu-saucy/' 'ubuntu-saucy'
-
 [Projects/Debian/dir2ogg]
 checkout = git clone 'git@github.com:julian-klode/dir2ogg.git' 'dir2ogg'
 
