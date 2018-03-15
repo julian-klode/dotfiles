@@ -13,7 +13,7 @@ git_show = git show "$@"
 checkout = git clone 'git.debian.org:public_git/website.git' 'website'
 
 [Projects/Debian/apt]
-checkout = git clone 'git+ssh://git.debian.org/git/apt/apt.git' 'apt'
+checkout = git clone 'https://salsa.debian.org/apt-team/apt.git' 'apt'
 
 [Projects/Debian/dh-autoreconf]
 checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/dh-autoreconf.git' 'dh-autoreconf'
@@ -31,7 +31,7 @@ checkout = git clone 'git+ssh://git.debian.org/git/users/jak/hardlink.git' 'hard
 checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/ndiswrapper.git' 'ndiswrapper'
 
 [Projects/Debian/python-apt]
-checkout = git clone 'git+ssh://git.debian.org/git/apt/python-apt.git' 'python-apt'
+checkout = git clone 'https://salsa.debian.org/apt-team/python-apt.git' 'python-apt'
 
 [Projects/Stable/apt-show-versions]
 checkout = git clone 'git+ssh://git.debian.org/git/users/jak/apt-show-versions.git' 'apt-show-versions'
