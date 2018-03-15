@@ -221,7 +221,7 @@ alias jessie="env LANG=C.UTF-8 LC_ALL=C.UTF-8 schroot -p -c jessie --"
 alias ubuntu="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEB_VENDOR=ubuntu DEBEMAIL=juliank@ubuntu.com EMAIL=\"Julian Andres Klode <juliank@ubuntu.com>\""
 alias debian="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEB_VENDOR=debian DEBEMAIL=jak@debian.org EMAIL=\"Julian Andres Klode <jak@debian.org>\""
 alias df="df --exclude-type=tmpfs --exclude-type=devtmpfs --exclude-type=ecryptfs --exclude-type=encfs --exclude=squashfs"
-
+alias cp="cp --reflink=auto"
 alias pastebinit="env -i pastebinit"
 # Add mosh alias
 alias mosh="mosh -p 61190"
