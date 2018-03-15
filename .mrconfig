@@ -45,9 +45,6 @@ checkout = git clone 'git+ssh://git.debian.org/git/users/jak/jak-meta.git' 'jak-
 [Projects/Stable/letterman]
 checkout = git clone 'git@bitbucket.org:julian_klode/letterman.git' 'letterman'
 
-[Projects/Stable/simple-efi-boot]
-checkout = git clone 'git+ssh://git.debian.org/git/users/jak/simple-efi-boot.git' 'simple-efi-boot'
-
 [Projects/Stable/superuser]
 checkout = git clone 'git@github.com:julian-klode/bacon-superuser.git' 'superuser'
 
