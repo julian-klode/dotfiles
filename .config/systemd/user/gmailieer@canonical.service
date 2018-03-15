@@ -1,0 +1,14 @@
+[Unit]
+Description=Sync gmail
+Requires=nm-online-exit.service
+After=nm-online-exit.service
+
+[Service]
+Type=oneshot
+Environment=NOTMUCH_CONFIG=/home/jak/mail.canonical/.notmuch-config
+ExecStart=/usr/bin/gmi sync
+WorkingDirectory=/home/jak/mail.canonical/account.canonical/
+IOSchedulingClass=idle
+
+[Install]
+WantedBy=default.target
