@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=WeeChat on server
+Name=WeeChat
+Exec=gnome-terminal --disable-factory --class weechat --name weechawt --title WeeChat -- mosh -p 61190 jak-linux.org -- tmux attach -t weechat
+Type=Application
+Icon=weechat
+StartupWMClass=weechat
+StartupNotify=true
