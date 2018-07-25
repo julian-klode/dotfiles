@@ -5,11 +5,11 @@ source ~/.mutt/account.gmail-common
 # IMAP server
 set folder="imaps://imap.gmail.com:993"
 set imap_user="julian.klode@gmail.com"
-set imap_pass=`sed -nr 's/password=(.*)/\1/p' ~/Private/esmtprc`
+set imap_pass=`sed -nr 's/password=(.*)/\\1/p' ~/Private/esmtprc`
 
 # SMTP server
 set smtp_url="smtp://julian.klode@gmail.com@smtp.gmail.com:587"
-set smtp_pass=`sed -nr 's/password=(.*)/\1/p' ~/Private/esmtprc`
+set smtp_pass=`sed -nr 's/password=(.*)/\\1/p' ~/Private/esmtprc`
 
 # Generic setup
 set spoolfile = "+INBOX"
