@@ -1,4 +1,0 @@
-[submodule ".ikiwiki"]
-	branch = plugin
-	path = .ikiwiki
-	url = https://github.com/julian-klode/jak-linux.org
