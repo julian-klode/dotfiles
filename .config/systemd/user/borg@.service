@@ -6,7 +6,7 @@ After=nm-online-exit.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/cpulimit -m -f -l 50 -- /usr/local/bin/bou "%i" cron
+ExecStart=/usr/local/bin/bou "%i" cron
 IOSchedulingClass=idle
 Nice=19
 CPUQuota=50%
