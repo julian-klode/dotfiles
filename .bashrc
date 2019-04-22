@@ -223,5 +223,3 @@ alias debian="env LANG=C.UTF-8 LC_ALL=C.UTF-8 DEB_VENDOR=debian DEBEMAIL=jak@deb
 alias df="df --exclude-type=tmpfs --exclude-type=devtmpfs --exclude-type=ecryptfs --exclude-type=encfs --exclude=squashfs"
 alias cp="cp --reflink=auto"
 alias pastebinit="env -i pastebinit"
-# Add mosh alias
-alias mosh="mosh -p 61190"
