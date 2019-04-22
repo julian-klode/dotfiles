@@ -7,7 +7,7 @@ After=nm-online-exit.service
 Type=oneshot
 Environment=NOTMUCH_CONFIG=/home/jak/mail.canonical/.notmuch-config
 ExecStart=/usr/bin/gmi sync
-WorkingDirectory=/home/jak/mail.canonical/account.canonical/
+WorkingDirectory=/home/jak/mail.canonical/
 IOSchedulingClass=idle
 
 [Install]

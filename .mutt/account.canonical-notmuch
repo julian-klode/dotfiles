@@ -41,7 +41,7 @@ macro index,pager .gt "<change-vfolder>Sent<enter>" "Go to inbox"
 macro index,pager .ga "<vfolder-from-query>*<enter>" "Go to inbox"
 
 macro index,pager ./ "<vfolder-from-query>" "Go to inbox"
-macro index,pager i "<sync-mailbox><shell-escape>cd /home/jak/mail.canonical/account.canonical && NOTMUCH_CONFIG=$HOME/mail.canonical/.notmuch-config gmi sync<enter>" "Synchronize gmail"
+macro index,pager i "<sync-mailbox><shell-escape>cd /home/jak/mail.canonical/ && NOTMUCH_CONFIG=$HOME/mail.canonical/.notmuch-config gmi sync<enter>" "Synchronize gmail"
 
 bind index "+" entire-thread
 
