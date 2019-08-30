@@ -1,0 +1,7 @@
+[Unit]
+Description=Run sort-traderepublic
+ConditionACPower=true
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/sort-traderepublic /home/jak/Documents/Bank/TradeRepublic/

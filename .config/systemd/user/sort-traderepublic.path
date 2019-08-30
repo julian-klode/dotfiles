@@ -1,0 +1,5 @@
+[Unit] 
+Wants=sort-traderepublic.service 
+
+[Path] 
+PathChanged=/home/jak/Documents/Bank/TradeRepublic/
