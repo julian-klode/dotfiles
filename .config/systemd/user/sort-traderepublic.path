@@ -3,3 +3,7 @@ Wants=sort-traderepublic.service
 
 [Path] 
 PathChanged=/home/jak/Documents/Bank/TradeRepublic/
+
+[Install]
+WantedBy=default.target
+
