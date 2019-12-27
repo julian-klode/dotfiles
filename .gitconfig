@@ -18,18 +18,16 @@
 
 # SSH everywhere
 [url "git@github.com:"]
-  insteadOf = "git://github.com/"
-  insteadOf = "https://github.com/"
+	pushInsteadOf = "git://github.com/"
+	pushInsteadOf = "https://github.com/"
 
 [url "git@bitbucket.org:"]
-	insteadOf = "git://bitbucket.org/"
-	insteadOf = "https://bitbucket.org/"
+	pushInsteadOf = "git://bitbucket.org/"
+	pushInsteadOf = "https://bitbucket.org/"
 
-[url "git+ssh://git.debian.org/"]
-	insteadOf = "https://anonscm.debian.org/"
 
 [url "git@salsa.debian.org:"]
-	insteadOf = "https://salsa.debian.org/"
+	pushInsteadOf = "https://salsa.debian.org/"
 [gitubuntu]
 	lpuser = juliank
 
