@@ -125,7 +125,9 @@ _run_git() {
 	env="env GIT_DIR=.hgit"
     fi
 
-    if echo "$@" | egrep -q 'commit|push'; then
+    if echo $PWD | grep -q Ubuntu; then
+	env="$env GIT_AUTHOR_EMAIL=julian.klode@canonical.com GIT_COMMITTER_EMAIL=julian.klode@canonical.com EMAIL=julian.klode@canonical.com"
+    elif echo "$@" | egrep -q 'commit|push'; then
 	if [ -z "$($env git config --local --get user.email)" ]; then
 	    echo "ERROR: No email adress specified" >&2
 	    return 1
