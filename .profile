@@ -51,4 +51,4 @@ export CTEST_OUTPUT_ON_FAILURE=1
 # Qt sucks
 export QT_STYLE_OVERRIDE=Adwaita-Dark
 
-_byobu_sourced=1 . /usr/bin/byobu-launch
+_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
