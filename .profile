@@ -27,7 +27,6 @@ fi
 # set PATH so it includes ccache binaries if installed
 if [ -d /usr/lib/ccache ]; then
     export PATH="/usr/lib/ccache:$PATH"
-    export CCACHE_DIR="$HOME/.cache/ccache"
 fi
 
 # Setup stuff for email and co
