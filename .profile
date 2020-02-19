@@ -50,4 +50,7 @@ export CTEST_OUTPUT_ON_FAILURE=1
 # Qt sucks
 export QT_STYLE_OVERRIDE=Adwaita-Dark
 
+# Ccache
+export CCACHE_DIR=$HOME/.ccache
+
 _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
