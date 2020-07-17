@@ -18,3 +18,5 @@ header "X-Debbugs-CC: jak@debian.org"
 # You can add other settings after this line.  See
 # /etc/reportbug.conf for a full listing of options.
 mutt
+
+bts debian
