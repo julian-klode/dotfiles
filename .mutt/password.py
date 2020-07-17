@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import gi
 
 gi.require_version('GnomeKeyring', '1.0')
@@ -30,4 +30,4 @@ def keyring(user="", host="", proto="imap"):
 	except:
 		return values[0].password
 import sys
-print keyring(*sys.argv[1:])
+print(keyring(*sys.argv[1:]))
