@@ -3,4 +3,5 @@ Description=Run sort-traderepublic
 
 [Service]
 Type=oneshot
+ExecStartPre=/bin/sleep 5
 ExecStart=/usr/local/bin/sort-traderepublic /home/jak/Documents/Bank/TradeRepublic/
