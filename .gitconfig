@@ -34,3 +34,7 @@
 [url "git+ssh://juliank@git.launchpad.net/"]
     insteadOf = lp:
     insteadOf = https://git.launchpad.net/
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
