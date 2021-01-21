@@ -13,7 +13,7 @@ mode expert
 # email "jak@debian.org"
 # Disable fallback mode by commenting out the following:
 no-cc
-header "X-Debbugs-CC: jak@debian.org"
+list-cc-me
 #smtphost bugs.debian.org
 # You can add other settings after this line.  See
 # /etc/reportbug.conf for a full listing of options.
