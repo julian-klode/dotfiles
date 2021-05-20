@@ -53,3 +53,7 @@ match ExtraWhitespace /\s\+$/
 set list
 set listchars=tab:▸\ 
 
+
+set directory=$XDG_RUNTIME_DIR/vim/swap//
+set undodir=$XDG_RUNTIME_DIR/vim/undo//
+set undofile
