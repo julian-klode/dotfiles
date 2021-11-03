@@ -226,7 +226,11 @@ alias df="df --exclude-type=tmpfs --exclude-type=devtmpfs --exclude-type=ecryptf
 alias cp="cp --reflink=auto"
 alias pastebinit="env -i pastebinit"
 
-hledger() {
-    lxc exec hledger -- sudo -iu ubuntu env -C $PWD hledger "$@"
-    return $?
-}
+#hledger() {
+#    lxc exec hledger -- sudo -iu ubuntu env -C $PWD hledger "$@"
+#    return $?
+#}
+
+alias hledger="podman run --rm -it  -v $HOME/.hledger:/home/hledger/.hledger -v $HOME/.hledger:$HOME/.hledger -v $HOME/.hledger.journal:/home/hledger/.hledger.journal  dastapov/hledger hledger"
+alias hledger-web="podman run -p 5000:5000 --rm -it  -v $HOME/.hledger:/home/hledger/.hledger -v $HOME/.hledger:$HOME/.hledger -v $HOME/.hledger.journal:/home/hledger/.hledger.journal  dastapov/hledger hledger-web --host=0.0.0.0"
+alias hledger-ui="podman run --rm -it  -v $HOME/.hledger:/home/hledger/.hledger -v $HOME/.hledger:$HOME/.hledger -v $HOME/.hledger.journal:/home/hledger/.hledger.journal  dastapov/hledger hledger-ui"
