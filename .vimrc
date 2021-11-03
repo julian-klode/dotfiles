@@ -37,6 +37,7 @@ set autoindent
 filetype plugin indent on
 " -i special hacks
 :autocmd BufRead,BufNewFile /home/jak/Projects/Debian/apt/*.{cc,h} setlocal shiftwidth=3 noexpandtab tabstop=8 softtabstop=3
+:autocmd BufRead,BufNewFile *.go setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=0
 
 " Search settings
 set ignorecase
