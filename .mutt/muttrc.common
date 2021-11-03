@@ -50,7 +50,7 @@ bind editor ^T complete
 
 # Mail view
 ignore *
-unignore Date From To CC List-Id Message-Id Subject Reply-To X-Debian-PR-Package User-Agent X-Mailer Newsgroups
+unignore Date From To CC List-Id Message-Id Subject Reply-To Mail-Followup-To X-Debian-PR-Package User-Agent X-Mailer Newsgroups
 
 auto_view text/html
 alternative_order text/plain text/html
