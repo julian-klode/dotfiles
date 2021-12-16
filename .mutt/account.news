@@ -1,6 +1,7 @@
 # Configuration for reading mailing lists via gmane
 # Base files
 source ~/.mutt/muttrc.common
+source ~/.mutt/account.gmail-common
 
 set smtp_url="smtp://julian.klode@gmail.com@smtp.gmail.com:587"
 set smtp_pass=`sed -nr 's/password=(.*)/\\1/p' ~/Private/esmtprc`
@@ -12,8 +13,8 @@ set sidebar_visible=yes
 set from="jak@debian.org"
 
 # Server and mailboxes
-set news_server="news://news.gmane.org/"
-set folder="news://news.gmane.org/"
+set news_server="news://news.gmane.io/"
+set folder="news://news.gmane.io/"
 set spoolfile="+gmane.linux.debian.devel.general"
 
 mailboxes +gmane.linux.debian.devel.general \
