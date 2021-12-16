@@ -157,7 +157,7 @@ alias gitg="_run_git gitg"
 alias debsign="debsign -kjak@debian.org"
 alias diff="git diff --no-index --no-prefix"
 
-alias can="mutt -F ~/.mutt/account.canonical-notmuch"
+alias can="env NOTMUCH_CONFIG=/home/jak/mail.canonical/.notmuch-config mutt -F ~/.mutt/account.canonical-notmuch"
 alias math="mutt -F ~/.mutt/account.math"
 alias stud="mutt -F ~/.mutt/account.students"
 alias marburg="mutt -F ~/.mutt/account.students"
