@@ -32,11 +32,12 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-" - autoindentation
+" - auto indentation
 set autoindent
 filetype plugin indent on
 " -i special hacks
 :autocmd BufRead,BufNewFile /home/jak/Projects/Debian/apt/*.{cc,h} setlocal shiftwidth=3 noexpandtab tabstop=8 softtabstop=3
+:autocmd BufRead,BufNewFile /home/jak/Projects/Stable/apt-solver-kalel/*.{cc,h} setlocal shiftwidth=3 noexpandtab tabstop=8 softtabstop=3
 :autocmd BufRead,BufNewFile *.go setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=0
 
 " Search settings
@@ -58,3 +59,5 @@ set listchars=tab:▸\
 set directory=$XDG_RUNTIME_DIR/vim/swap//
 set undodir=$XDG_RUNTIME_DIR/vim/undo//
 set undofile
+
+set spell spelllang=en_gb,en_us
