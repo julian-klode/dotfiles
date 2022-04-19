@@ -7,4 +7,3 @@ Icon=weechat
 StartupWMClass=weechat
 StartupNotify=true
 MimeType=x-scheme-handler/weechat
-OnlyShowIn=INVALID
