@@ -37,4 +37,8 @@
 [init]
 	defaultBranch = main
 [pull]
-	ff = only
+    ff = only
+
+[filter "gpg"]
+    clean = "gpg --encrypt --recipient jak@debian.org -a"
+    smudge = "gpg --decrypt"
