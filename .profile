@@ -53,4 +53,7 @@ export QT_STYLE_OVERRIDE=Adwaita-Dark
 # Ccache
 export CCACHE_DIR=$HOME/.ccache
 
+# lto is slow, me no like
+export DEB_BUILD_OPTIONS=optimize=-lto
+
 _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
