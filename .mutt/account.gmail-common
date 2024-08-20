@@ -20,7 +20,6 @@ subscribe   debian-devel-announce@lists.debian.org \
             debian-backports@lists.debian.org \
             debian-private@lists.debian.org \
             deity@lists.debian.org \
-            https://mailarchive.ietf.org/arch/browse/openpgp/
             spi-private@lists.spi-inc.org \
             pkg-meego-maintainers@lists.alioth.debian.org \
             ac100@lists.launchpad.net \
