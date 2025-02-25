@@ -60,11 +60,11 @@ virtual-mailboxes \
     "Unread"    "notmuch://?query=tag:unread"\
     "Starred"   "notmuch://?query=tag:flagged" \
     "Sent"      "notmuch://?query=tag:sent"        \
-    "Debian/Announce" "notmuch://?query=tag:lists/debian-devel-announce" \
-    "Debian/APT" "notmuch://?query=tag:lists/deity tag:lists/apt" \
-    "Debian/Dpkg" "notmuch://?query=tag:lists/debian-dpkg" \
-    "Debian/Private" "notmuch://?query=tag:lists/debian-private" \
-    "Debian/Security" "notmuch://?query=tag:lists/debian-security" \
+    "Debian/Announce" "notmuch://?query=tag:lists/debian-devel-announce&type=threads" \
+    "Debian/APT" "notmuch://?query=tag:lists/deity tag:lists/apt&type=threads" \
+    "Debian/Dpkg" "notmuch://?query=tag:lists/debian-dpkg&type=threads" \
+    "Debian/Private" "notmuch://?query=tag:lists/debian-private&type=threads" \
+    "Debian/Security" "notmuch://?query=tag:lists/debian-security&type=threads" \
 
 
 # Gmail bindings
