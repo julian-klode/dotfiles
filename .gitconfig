@@ -4,7 +4,8 @@
 [color]
 	ui = auto
 [alias]
-	cd = diff -p --stat
+    cd = diff -p --stat
+    pushf = push --force-with-lease
 [push]
 	default = simple
 [merge "dpkg-mergechangelogs"]
@@ -21,6 +22,14 @@
 	pushInsteadOf = "git://github.com/"
 	insteadOf = "https://github.com"
 
+# SSH everywhere
+[url "git@gitlab.com:"]
+	pushInsteadOf = "git://gitlab.com/"
+	insteadOf = "https://gitlab.com"
+
+[url "git@gist.github.com:"]
+	insteadOf = "https://gist.github.com/julian-klode/"
+
 [url "git@bitbucket.org:"]
 	pushInsteadOf = "git://bitbucket.org/"
 	pushInsteadOf = "https://bitbucket.org/"
@@ -31,7 +40,7 @@
 [gitubuntu]
 	lpuser = juliank
 
-[url "git+ssh://juliank@git.launchpad.net/"]
+[url "ssh://juliank@git.launchpad.net/"]
     insteadOf = lp:
     insteadOf = https://git.launchpad.net/
 [init]
@@ -42,3 +51,6 @@
 [filter "gpg"]
     clean = "gpg --encrypt --recipient jak@debian.org -a"
     smudge = "gpg --decrypt"
+[credential "https://salsa.debian.org"]
+	helper = 
+	helper = !/usr/bin/glab auth git-credential
