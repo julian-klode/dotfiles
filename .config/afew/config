@@ -1,0 +1,22 @@
+# This is the default filter chain
+[SpamFilter]
+[KillThreadsFilter]
+[ListMailsFilter]
+[ArchiveSentMailsFilter]
+sent_tag = sent
+[Filter.0]
+query = tag:lists/debian-private
+tags = -new
+[Filter.1]
+query = folder:Archives
+tags = -new
+[Filter.2]
+query = folder:Trash
+tags = -new +trash
+[InboxFilter]
+[MailMover]
+folders = INBOX Archives Trash
+rename = true
+INBOX = 'NOT tag:inbox':Archives 'tag:trash':Trash
+Archives = 'tag:inbox':INBOX 'tag:trash':Trash
+Trash = 'not:tag:trash':INBOX

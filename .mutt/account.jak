@@ -1,0 +1,122 @@
+# Base files
+source ~/.mutt/muttrc.common
+
+set from="jak@jak-linux.org"
+alternates ^jak@debian.org$ ^jak@jak-linux.org$ ^juliank@ubuntu.com$
+
+# Configure mailing lists
+lists       .*@lists.debian.org \
+            .*@lists.ubuntu.com \
+            [0-9]+@bugs.debian.org \
+            .*@lists.launchpad.net \
+            .*@lists.spi-inc.org \
+            .*@lists.alioth.debian.org \
+            devel@linuxdriverproject.org \
+            openpgp@ietf.org \
+            .*@vger.kernel.org
+
+subscribe   debian-devel-announce@lists.debian.org \
+            debian-announce@lists.debian.org \
+            debian-infrastructure-announce@lists.debian.org \
+            debian-security-announce@lists.debian.org \
+            debian-backports@lists.debian.org \
+            debian-private@lists.debian.org \
+            deity@lists.debian.org \
+            spi-private@lists.spi-inc.org \
+            pkg-meego-maintainers@lists.alioth.debian.org \
+            ac100@lists.launchpad.net \
+            openpgp@ietf.org \
+            devel@linuxdriverproject.org
+
+
+# Automatically choose the correct sender
+send-hook . 'unmy_hdr From:'
+send-hook . 'unmy_hdr Message-ID:'
+
+send-hook '~C ^.*gnome\.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
+send-hook '~C ^ac100@lists.launchpad.net\.net$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
+send-hook '~C ^devel@linuxdriverproject\.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
+send-hook '~C ^devel@driverdev\.osuosl\.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
+send-hook '~C @vger.kernel.org$' 'my_hdr From: Julian Andres Klode <jak@jak-linux.org>'
+
+send-hook '~C ^openpgp@ietf.org$' 'my_hdr From: Julian Andres Klode <jak@debian.org>'
+send-hook '~C ^.*debian\.org$' 'my_hdr From: Julian Andres Klode <jak@debian.org>'
+send-hook '~C ^.*debian\.org$' 'my_hdr Message-ID: <`date +"%Y%m%d%H%M%S"`.GA`echo $PPID`@debian.org>'
+send-hook '~C ^.*debconf\.org$' 'my_hdr From: Julian Andres Klode <jak@debian.org>'
+send-hook '~C ^.*debconf\.org$' 'my_hdr Message-ID: <`date +"%Y%m%d%H%M%S"`.GA`echo $PPID`@debian.org>'
+
+# SMTP server
+set smtp_url="smtp://jak@jak-linux.org@magenta.jak-linux.org:587"
+set smtp_pass=`cat ~/Private/mail.magenta.jak-linux.org`
+
+# Mailbox setup
+set nm_default_uri="notmuch:///home/jak/Mail/jak" # path to the maildir
+set record="~/Mail/jak/Sent"
+set nm_record=yes
+set nm_record_tags=sent
+set virtual_spoolfile=yes                          # enable virtual folders
+virtual-mailboxes \
+    "INBOX"     "notmuch://?query=tag:inbox"\
+    "Unread"    "notmuch://?query=tag:unread"\
+    "Starred"   "notmuch://?query=tag:flagged" \
+    "Sent"      "notmuch://?query=tag:sent"        \
+    "Debian/Announce" "notmuch://?query=tag:lists/debian-devel-announce" \
+    "Debian/APT" "notmuch://?query=tag:lists/deity tag:lists/apt" \
+    "Debian/Dpkg" "notmuch://?query=tag:lists/debian-dpkg" \
+    "Debian/Private" "notmuch://?query=tag:lists/debian-private" \
+    "Debian/Security" "notmuch://?query=tag:lists/debian-security" \
+
+
+# Gmail bindings
+bind index,pager . noop
+
+# These depend on the current mailbox if they want to hide emails that have
+# their label removed.
+macro index,pager e "<modify-labels-then-hide>-inbox -before-zero -Later<enter>"        # tag as Archived
+macro index,pager .tl "<modify-labels-then-hide>-inbox -before-zero +Later<enter>" "Tag later"
+macro index,pager .ti "<modify-labels-then-hide>+inbox -before-zero -Later<enter>" "Tag inbox"
+
+macro index,pager F "<vfolder-from-query>"              # looks up a hand made query
+macro index,pager \# "<modify-labels-then-hide>+trash<enter>" "Send to trash"
+macro index,pager d "<modify-labels-then-hide>+trash<enter>" "Send to trash"
+macro index,pager U "<modify-labels>+unread<enter>"        # tag as Archived
+macro index,pager u "<modify-labels-then-hide>-trash<enter>"        # tag as Archived
+macro index,pager ! "<modify-labels-then-hide>+spam<enter>"        # tag as Archived
+macro index,pager .gi "<change-vfolder>INBOX<enter>" "Go to inbox"
+macro index,pager .gs "<change-vfolder>Starred<enter>" "Go to inbox"
+macro index,pager .gt "<change-vfolder>Sent<enter>" "Go to inbox"
+macro index,pager .ga "<vfolder-from-query>*<enter>" "Go to inbox"
+
+macro index,pager ./ "<vfolder-from-query>" "Go to inbox"
+macro index,pager i "<sync-mailbox><shell-escape>mail-sync<enter>" "Synchronize gmail"
+
+bind index "+" entire-thread
+
+bind index,pager 2 next-unread
+bind index,pager 8 previous-unread
+
+# Hide tags we don't care about and exclude trash and spam by default
+set nm_exclude_tags="trash,spam"
+
+# Index formatting
+set index_format="%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s%* %g"
+
+tag-transforms  \
+    "important" "!" \
+    "inbox" "I" \
+    "trash" "♲" \
+    "replied" "↻ "  \
+    "encrypted" "🔒" \
+    "before-zero" "0" \
+    "later" "L" \
+    "signed" "S" \
+    "sent"    "➥"  \
+
+# Show the tags header
+unignore Tags
+
+# Sidebar format: Show message count
+set sidebar_format="%D%* %?N?%N/?%S"
+
+# Address book
+set query_command="notmuch-addrlookup --mutt '%s'"

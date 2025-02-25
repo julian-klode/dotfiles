@@ -1,0 +1,28 @@
+Create Both
+Expunge Both
+Sync All
+SyncState *
+
+# IMAPAccount personal
+# ...
+
+IMAPAccount jak
+Host magenta.jak-linux.org
+User jak@jak-linux.org
+PassCmd "cat ~/Private/mail.magenta.jak-linux.org"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore jak-remote
+Account jak
+
+MaildirStore jak-local
+Path ~/Mail/jak/
+Inbox ~/Mail/jak/INBOX
+SubFolders Verbatim
+
+Channel jak
+Far :jak-remote:
+Near :jak-local:
+Patterns *
+
