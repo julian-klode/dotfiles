@@ -16,7 +16,7 @@ set crypt_replysign=yes
 set crypt_use_gpgme=yes
 set crypt_autosmime=no
 set pgp_auto_decode=yes
-set sort='threads'
+set use_threads='threads'
 set sort_aux='last-date-received'
 set index_format="%4C %Z %{%b %d} %-30.30L (%?l?%4l&%4c?) %s"
 set reverse_name=yes
@@ -29,13 +29,6 @@ set record="~/mail/outbox"
 # File formats
 auto_view text/html application/pdf
 alternative_order text/plain text/html
-
-# Color settings
-color index brightyellow black ~N
-color index magenta black ~F
-color index blue black ~T
-color index red black ~D
-color sidebar_new yellow default
 
 # Key bindings
 bind index,pager \CP sidebar-prev
