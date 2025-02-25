@@ -1,3 +1,9 @@
+[lpdev]
+fqdn = ppa.launchpad.test:2121
+method = ftp
+incoming = %(lpdev)s
+login = anonymous
+
 [people]
 fqdn = people.debian.org
 method = sftp
