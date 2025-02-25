@@ -1,7 +1,8 @@
 [Desktop Entry]
 Comment=WeeChat on server
 Name=WeeChat (SSH)
-Exec=gnome-terminal --disable-factory --class weechat-ssh --name weechat-ssh --app-id org.weechat.weechat-ssh --title WeeChat -- ssh -oControlMaster=no -i /home/jak/.ssh/weechat_ssh_id_rsa -o IdentitiesOnly=yes -t weechat@10.0.0.1 -- tmux attach -dt irc
+Exec=gnome-terminal --disable-factory --class weechat-ssh --name weechat-ssh --app-id org.weechat.weechat-ssh --title WeeChat -- ssh -oControlMaster=no -i /home/jak/.ssh/weechat_ssh_id_rsa -o IdentitiesOnly=yes -t weechat@jak-linux.org -- tmux attach -dt irc
+#Exec=kgx --gapplication-app-id org.weechat.weechat-ssh --title WeeChat -- ssh -oControlMaster=no -i /home/jak/.ssh/weechat_ssh_id_rsa -o IdentitiesOnly=yes -t weechat@10.0.0.1 -- tmux attach -dt irc
 Type=Application
 Icon=weechat
 StartupWMClass=weechat-ssh
