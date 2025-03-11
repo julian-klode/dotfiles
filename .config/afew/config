@@ -5,7 +5,7 @@
 [ArchiveSentMailsFilter]
 sent_tag = sent
 [Filter.0]
-query = tag:lists/debian-private
+query = tag:lists/debian-private OR tag:lists/openpgp
 tags = -new
 [Filter.1]
 query = folder:Archives
@@ -13,10 +13,14 @@ tags = -new
 [Filter.2]
 query = folder:Trash
 tags = -new +trash
+[Filter.3]
+query = folder:Junk
+tags = -new +spam
 [InboxFilter]
 [MailMover]
 folders = INBOX Archives Trash
 rename = true
-INBOX = 'NOT tag:inbox':Archives 'tag:trash':Trash
-Archives = 'tag:inbox':INBOX 'tag:trash':Trash
+INBOX = 'NOT tag:inbox':Archives 'tag:trash':Trash 'tag:spam':Junk
+Archives = 'tag:inbox':INBOX 'tag:trash':Trash 'tag:spam':Junk
 Trash = 'not:tag:trash':INBOX
+Junk = 'not:tag:spam':INBOX
