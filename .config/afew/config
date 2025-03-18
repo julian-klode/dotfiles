@@ -12,10 +12,10 @@ query = folder:Archives
 tags = -new
 [Filter.2]
 query = folder:Trash
-tags = -new +trash
+tags = -new;+trash
 [Filter.3]
 query = folder:Junk
-tags = -new +spam
+tags = -new;+spam
 [InboxFilter]
 [MailMover]
 folders = INBOX Archives Trash
