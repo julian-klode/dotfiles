@@ -3,8 +3,7 @@ source ~/.mutt/muttrc.common
 
 # SMTP server
 set from="julian.klode@canonical.com"
-set smtp_url="smtp://julian.klode@canonical.com@smtp.gmail.com:587"
-set smtp_pass=`cat ~/Private/canonical-smtp`
+set sendmail="/home/jak/.mutt/canonical-sendmail"
 
 # Mailbox setup
 set nm_default_uri="notmuch:///home/jak/mail.canonical" # path to the maildir

@@ -1,0 +1,2 @@
+#!/bin/sh
+cd /home/jak/mail.canonical/ && NOTMUCH_CONFIG=$HOME/mail.canonical/.notmuch-config gmi send -t -C ~/mail.canonical
