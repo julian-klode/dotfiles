@@ -1,5 +1,5 @@
 [user]
-	email = jak@debian.org
+	email = jak@jak-linux.org
 	name = Julian Andres Klode
 [color]
 	ui = auto
@@ -54,3 +54,8 @@
 [credential "https://salsa.debian.org"]
 	helper = 
 	helper = !/usr/bin/glab auth git-credential
+
+[includeIf "gitdir:~/Projects/Debian/**"]
+	path = ~/.config/git/debian.inc
+[includeIf "gitdir:~/Projects/Ubuntu/**"]
+	path = ~/.config/git/ubuntu.inc
