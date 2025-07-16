@@ -1,0 +1,5 @@
+#$build_environment = { "DEB_BUILD_OPTIONS" => "nocheck" };
+$build_environment = { "DEB_BUILD_OPTIONS" => "" };
+$chroot_mode = "unshare";
+$unshare_mmdebstrap_keep_tarball = 1;
+$resolve_alternatives = 1;
