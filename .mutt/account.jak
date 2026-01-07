@@ -54,7 +54,7 @@ set nm_default_uri="notmuch:///home/jak/Mail/jak" # path to the maildir
 set record="~/Mail/jak/Sent"
 set nm_record=yes
 set nm_record_tags=sent
-set virtual_spoolfile=yes                          # enable virtual folders
+set virtual_spoolfile="INBOX"                          # enable virtual folders
 virtual-mailboxes \
     "INBOX"     "notmuch://?query=tag:inbox"\
     "Unread"    "notmuch://?query=tag:unread"\
